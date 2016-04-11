@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<channel>
+		<title>Jony&#39;s Blog</title>
+		<description>Blog and website of Jony Bepary, Where He Share His Thoughts, stories and ideas.</description>
+		<link>http://jonybepary.github.io/Jonys-Blog/-/</link>
+		<atom:link href="http://jonybepary.github.io/Jonys-Blog/-//feed.xml" rel="self" type="application/rss+xml" />
+		
+			<item>
+				<title>দেখুন কিভাবে উবুন্টু লাইভ সিডি/ ইউএসবি দিয়ে Grub-2 কে Repair, Restore, অথবা Reinstall করা যায়</title>
+				
+				
+					<description>&lt;p&gt;উবুন্টু যে গ্রাব থাকে তা সাধারণত সহজে ক্রাশ হয়না। এবং এই গ্রাব উবুন্টু ধারা পরিচালিত বিধায় যথেষ্ট স্ট্যাবল হিসেবে রিলিজ হয়। কিন্তু আপনি যখন &lt;u&gt;Windows&lt;/u&gt; অথবা কোন অন্য অপারেটিং সিস্টেম ইন্সটল করেন তখন নতুন &lt;u&gt; Bootloader &lt;/u&gt; সাধারণত &lt;u&gt; Grub &lt;/u&gt; কে &lt;u&gt; overridden &lt;/u&gt; / উপেক্ষা করে বুট নেয়। সোজা কথায় পিসি বুট করার সময় গ্রাব এ না গিয়ে সরাসরি অন্য ওএস এ বুট নেয় আর তাই গ্রাব মেনুর কোন চিহ্ন পাওয়া যায় না। আর তাই বুটলোডারে গ্রাব মেনু নিয়ে আসতে। আপনাকে উবুন্টু লাইভ সিডি ব্যবহার করে গ্রাব কে আবার পুনরুদ্ধার ( মানে &lt;u&gt;Reinstall (Repair/Restore)&lt;/u&gt; ) করতে হবে।&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Mon, 13 Jul 2015 00:00:00 +0600</pubDate>
+				<link>http://jonybepary.github.io/Jonys-Blog/-//linux/2015/07/13/%E0%A6%97-%E0%A6%B0%E0%A6%BE%E0%A6%AC-%E0%A6%B0%E0%A6%BF%E0%A6%AA%E0%A7%87%E0%A7%9F%E0%A6%BE%E0%A6%B0.html</link>
+				<guid isPermaLink="true">http://jonybepary.github.io/Jonys-Blog/-//linux/2015/07/13/%E0%A6%97-%E0%A6%B0%E0%A6%BE%E0%A6%AC-%E0%A6%B0%E0%A6%BF%E0%A6%AA%E0%A7%87%E0%A7%9F%E0%A6%BE%E0%A6%B0.html</guid>
+			</item>
+		
+			<item>
+				<title>Teach Yourself Programming in Ten Years</title>
+				
+				
+					<description>&lt;div class=&quot;summary&quot;&gt;২১ দিনে প্রোগ্রামিং শেখা আসলে সম্ভব না। চমৎকার প্রোগ্রামার হবার জন্য প্রয়োজন প্রচুর সময় নিয়ে স্বেচ্ছাকৃত অনুশীলন। কিভাবে নিজেকে দশ বছর সময়ের মধ্যে একজন চমৎকার প্রোগ্রামারে পরিণত করা যায় সেটা নিয়ে লিখেছেন গুগলের ডিরেক্টর অফ রিসার্চ - পিটার নরভিগ। পিটার নরভিগের অনুমতিক্রমে লেখাটা বাংলায় অনুবাদ করেছেন ইকরাম মাহমুদ।  
+&lt;/div&gt;
+
+</description>
+				
+				<pubDate>Mon, 25 May 2015 00:00:00 +0600</pubDate>
+				<link>http://jonybepary.github.io/Jonys-Blog/-//programming/2015/05/25/Teach-Yourself-Programming-in-Ten-Years.html</link>
+				<guid isPermaLink="true">http://jonybepary.github.io/Jonys-Blog/-//programming/2015/05/25/Teach-Yourself-Programming-in-Ten-Years.html</guid>
+			</item>
+		
+			<item>
+				<title>গোস্ট ব্লগকে গিটহাবে হোস্ট করার পরিপূর্ণ গাইডলাইন</title>
+				
+				
+					<description>&lt;p&gt;&lt;img src=&quot;/Jonys-Blog/-//img/Post/ghost-on-git/1.jpg&quot; alt=&quot;GitHub Logo&quot; /&gt;
+কেমন আছো তোমরা আশা করি ভাল। অনেক দিন থেকে কোন ব্লগে লেখা-লেখি করি না। তো আজকের হেডার দেখেই বুঝতে পেরেছ কি নিয়ে আজকের পোস্ট। হ্যাঁ আমি দেখাবো কিভাবে ‘গিটহাবে’ ব্লগিং প্ল্যাটফর্ম ‘গোস্ট’ হোস্ট করা যায়।&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Tue, 19 May 2015 00:00:00 +0600</pubDate>
+				<link>http://jonybepary.github.io/Jonys-Blog/-//programming/2015/05/19/%E0%A6%97%E0%A7%8B%E0%A6%B8-%E0%A6%9F-%E0%A6%AC-%E0%A6%B2%E0%A6%97%E0%A6%95%E0%A7%87-%E0%A6%97%E0%A6%BF%E0%A6%9F%E0%A6%B9%E0%A6%BE%E0%A6%AC%E0%A7%87-%E0%A6%B9%E0%A7%8B%E0%A6%B8-%E0%A6%9F-%E0%A6%95%E0%A6%B0%E0%A6%BE%E0%A6%B0-%E0%A6%AA%E0%A6%B0%E0%A6%BF%E0%A6%AA%E0%A7%82%E0%A6%B0-%E0%A6%A3-%E0%A6%97%E0%A6%BE%E0%A6%87%E0%A6%A1%E0%A6%B2%E0%A6%BE%E0%A6%87%E0%A6%A8.html</link>
+				<guid isPermaLink="true">http://jonybepary.github.io/Jonys-Blog/-//programming/2015/05/19/%E0%A6%97%E0%A7%8B%E0%A6%B8-%E0%A6%9F-%E0%A6%AC-%E0%A6%B2%E0%A6%97%E0%A6%95%E0%A7%87-%E0%A6%97%E0%A6%BF%E0%A6%9F%E0%A6%B9%E0%A6%BE%E0%A6%AC%E0%A7%87-%E0%A6%B9%E0%A7%8B%E0%A6%B8-%E0%A6%9F-%E0%A6%95%E0%A6%B0%E0%A6%BE%E0%A6%B0-%E0%A6%AA%E0%A6%B0%E0%A6%BF%E0%A6%AA%E0%A7%82%E0%A6%B0-%E0%A6%A3-%E0%A6%97%E0%A6%BE%E0%A6%87%E0%A6%A1%E0%A6%B2%E0%A6%BE%E0%A6%87%E0%A6%A8.html</guid>
+			</item>
+		
+			<item>
+				<title>প্রোগ্রামিং ভাবনা</title>
+				
+				
+					<description>&lt;p&gt;আমরা কি অনুভব করি কী অভাবনীয় একটা সময়ে আমরা বাস করছি? এইতো একটু আগে আমি ডানে ঘুরে তাকালাম, আর পাঁচ ফুট দূরেই জানালার কাঁচে দেখতে পেলাম নিজের প্রতিবিম্ব। আমার ছবিটা কাঁচে প্রতিফলিত হয়ে আবার আমার কাছে ফিরে আসতে অতিক্রম করলো প্রায় দশ ফুট। এটুকু যেতে আসতে আলোর সময় লাগলো দশ ন্যানো সেকেন্ড। আমার ল্যাপটপের প্রসেসরের ক্লক স্পিড যদি ১ গিগা হার্জ হতো তাহলে এই অতি ক্ষুদ্র সময়ে সে প্রায় দশটা ছোট ছোট গণনার কাজ করে ফেলতে পারতো! কিন্তু আমার কম্পিউটারের স্পিড প্রায় ২ গিগা হার্জ। এবং তার প্রসেসরের কোর আছে ৪ টা অর্থাৎ এই সময়েই সে, ৮০ টা গণনা কাজ শেষ করে ফেলেছে । এ প্রসঙ্গে ভাবা যেতে পারে অ্যাপোলো ১১ নভোযানের কথা যেটাতে করে প্রথম মানুষ চাঁদে পৌছায়। এই নভোজানের নিয়ন্ত্রণকারী কম্পিউটার পুরো ৮ দিনের মিশনে যতগুলো গণনা কাজ করেছে, তা আমার এই ল্যাপটপ করতে পারবে মাত্র ৩ মিনিটে ! আমি নিশ্চিত তুমি যে কম্পিউটারের সামনে বসে এই লেখাটা পড়ছো সেটার ক্ষমতাও এর কাছা-কাছি। কিন্তু কই, আমরা তো চাঁদে চলে যাচ্ছি না। এমনকি চাঁদে চন্দ্রবিন্দুর সাথে তুলনীয় কোনো “অ-সাম” কাজও করতে পারছিনা আমরা কেউই। কী অভাবনীয় এক শক্তির আধার হাতে নিয়ে বসে আছি তা আমরা উপলব্ধি করছি না। আর যারা একটু আধটু উপলব্ধি করি তারাও সেটা ব্যবহারে ব্যর্থ হই কারণ আমরা প্রোগ্রামিং জানি না। আর জানলেও, কখনো নিজের কম্পিউটারের ক্ষমতার আলটিমেট ব্যবহার কী করতে পারি তা নিয়ে ভাবি না আমরা কেউ। কম্পিউটারের সাহায্যে কী অভাবনীয় সব কাজ কর্ম করা হচ্ছে এবং নিজেদের অজান্তেই তার কতকিছু আমরা ব্যবহার করছি সেসব নিয়ে লিখবো অন্য কখনো। আজকের এই লেখাটি যারা প্রোগ্রামিং শিখতে চায় তাদের জন্য। অনেকটা প্রশ্ন-উত্তর ফরম্যাটে লেখা । পাঠকরা যদি নিজেদের প্রশ্নের উত্তর মূল লেখায় না পান, তাহলে মন্তব্যের ঘরে জিজ্ঞেস করলে পরবর্তী ভার্সনে আপডেট করে নেওয়া হবে। তাহলে শুরু করা যাক,&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Wed, 06 May 2015 00:00:00 +0600</pubDate>
+				<link>http://jonybepary.github.io/Jonys-Blog/-//programming/2015/05/06/%E0%A6%AA-%E0%A6%B0%E0%A7%8B%E0%A6%97-%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%BF%E0%A6%82-%E0%A6%AD%E0%A6%BE%E0%A6%AC%E0%A6%A8%E0%A6%BE.html</link>
+				<guid isPermaLink="true">http://jonybepary.github.io/Jonys-Blog/-//programming/2015/05/06/%E0%A6%AA-%E0%A6%B0%E0%A7%8B%E0%A6%97-%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%BF%E0%A6%82-%E0%A6%AD%E0%A6%BE%E0%A6%AC%E0%A6%A8%E0%A6%BE.html</guid>
+			</item>
+		
+			<item>
+				<title>বানর মামার প্রোগ্রামিং ল্যাঙ্গুয়েজ</title>
+				
+				
+					<description>&lt;p&gt;Ook! Ook!! Ook!!!কি কিছু বুঝলেন? এটা হচ্ছে Ook! প্রোগ্রামিং ল্যাঙ্গুয়েজের নাম। আমরা মানুষরা যেহেতু প্রোগ্রামিংয়ে এত এগিয়ে গিয়েছি। তাহলে বানররা কেন পিছিয়ে থাকবে তাই বানর মামদের জন্য &lt;a href=&quot;https://esolangs.org/wiki/David_Morgan-Mar&quot;&gt;++David Morgan-Mar++&lt;/a&gt; নামক এক অতি ভদ্র ব্যাক্তি ধারা তৈরি হয়েছে এই কুখ্যাত প্রোগ্রামিং ল্যাঙ্গুয়েজ Ook!।&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Tue, 05 May 2015 00:00:00 +0600</pubDate>
+				<link>http://jonybepary.github.io/Jonys-Blog/-//programming/2015/05/05/%E0%A6%AC%E0%A6%BE%E0%A6%A8%E0%A6%B0-%E0%A6%AE%E0%A6%BE%E0%A6%AE%E0%A6%BE%E0%A6%B0-%E0%A6%AA-%E0%A6%B0%E0%A7%8B%E0%A6%97-%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%BF%E0%A6%82-%E0%A6%B2-%E0%A6%AF%E0%A6%BE%E0%A6%99-%E0%A6%97%E0%A7%81%E0%A7%9F%E0%A7%87%E0%A6%9C.html</link>
+				<guid isPermaLink="true">http://jonybepary.github.io/Jonys-Blog/-//programming/2015/05/05/%E0%A6%AC%E0%A6%BE%E0%A6%A8%E0%A6%B0-%E0%A6%AE%E0%A6%BE%E0%A6%AE%E0%A6%BE%E0%A6%B0-%E0%A6%AA-%E0%A6%B0%E0%A7%8B%E0%A6%97-%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%BF%E0%A6%82-%E0%A6%B2-%E0%A6%AF%E0%A6%BE%E0%A6%99-%E0%A6%97%E0%A7%81%E0%A7%9F%E0%A7%87%E0%A6%9C.html</guid>
+			</item>
+		
+			<item>
+				<title>কিভাবে একটি কাস্টম রম পোর্ট করা যায়</title>
+				
+				
+					<description>&lt;p&gt;&lt;img src=&quot;/Jonys-Blog/-//img/Post/custom-rom-porting/1.jpg&quot; alt=&quot;alt text&quot; /&gt;
+হ্যালো বন্ধুরা কেমন আছেন আশা করি ভাল আমি আজ অনেক দিন পর লিখতে বসলাম।
+আজকে যা লিখব তা হল কি ভাবে আপনি mtk mobile এর জন্য কাস্টম রম বানাবেন !!
+এটা কাস্টম রম নিয়ে আমার প্রথম পোস্ট। এবং আমি আপনাকে দেখাবো
+স্টক 4.2 থেকে অন্য একটি চাইনিজ 4.2  রম port করবেন (আপনি যেকোন chinese রম পোর্ট করতে পারেন কিন্তু ডাওনলডেড রম অবশ্যই এক android version হতে হবে এবং একই প্রসেসর এর হতে হবে। )&lt;/p&gt;
+
+</description>
+				
+				<pubDate>Mon, 04 May 2015 00:00:00 +0600</pubDate>
+				<link>http://jonybepary.github.io/Jonys-Blog/-//android/2015/05/04/%E0%A6%95%E0%A6%BF%E0%A6%AD%E0%A6%BE%E0%A6%AC%E0%A7%87-%E0%A6%8F%E0%A6%95%E0%A6%9F%E0%A6%BF-%E0%A6%95%E0%A6%BE%E0%A6%B8-%E0%A6%9F%E0%A6%AE-%E0%A6%B0%E0%A6%AE-%E0%A6%AA%E0%A7%8B%E0%A6%B0-%E0%A6%9F-%E0%A6%95%E0%A6%B0%E0%A6%BE-%E0%A6%AF%E0%A6%BE%E0%A7%9F.html</link>
+				<guid isPermaLink="true">http://jonybepary.github.io/Jonys-Blog/-//android/2015/05/04/%E0%A6%95%E0%A6%BF%E0%A6%AD%E0%A6%BE%E0%A6%AC%E0%A7%87-%E0%A6%8F%E0%A6%95%E0%A6%9F%E0%A6%BF-%E0%A6%95%E0%A6%BE%E0%A6%B8-%E0%A6%9F%E0%A6%AE-%E0%A6%B0%E0%A6%AE-%E0%A6%AA%E0%A7%8B%E0%A6%B0-%E0%A6%9F-%E0%A6%95%E0%A6%B0%E0%A6%BE-%E0%A6%AF%E0%A6%BE%E0%A7%9F.html</guid>
+			</item>
+		
+	</channel>
+</rss>

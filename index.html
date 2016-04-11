@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<script language="Javascript">
+</script>              
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!--/ #############################################################
+			Jony Bepary. | Jony's Blog
+############################################################# /!-->
+<html>
+<head>
+<title>Welcome to Jonys Blog.../.</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="Jony Bepary's Thoughts, stories and ideas."/>
+	<meta name="keywords" content="Jonys Blog, jonybepary.github.io/Jonybepary"/> 
+	<meta name="author" content="Sohel Ahmed Jony"/>
+	<meta name="robots" content="index, follow">
+	<meta http-equiv="refresh" content="3;URL=-/index.html">
+	<link rel="shortcut icon" href="-/favicon.ico">
+	<meta property="og:image" content="-/img-home/x0logo.jpg" />
+	<link rel="stylesheet" type="text/css" href="-/css/index.css" media="screen">
+	
+	<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
+	
+	<script src="-/js/restive.min.js"></script>
+	<script>
+    	$(document).ready(function () {
+        $('html').restive({
+            breakpoints: ['240', '320', '480', '640', '960', '1024', '1280'],
+            classes: ['css-240', 'css-320', 'css-480', 'css-640', 'css-960', 'css-1024', 'css-1280']
+        });
+    });
+    </script>
+
+
+
+</head>
+	<object type="application/x-shockwave-flash" data="-/swf/index-bg.swf" width="0" height="0">
+		<param name="wmode" value="transparent" />
+	</object>
+<body>
+	<div id="box">
+		<div id="boximg"><center><img src="-/img-index/JB-Sec.png" alt="Jonys Blog"></center>
+		</div>
+	<div id="analizebox">
+		<div id="analize">
+			<p>Current Date: &nbsp
+				<script type="text/javascript">
+					var currentDate = new Date()
+					var day = currentDate.getDate()
+					var month = currentDate.getMonth() + 1
+					var year = currentDate.getFullYear()
+					document.write("<b>" + day + "/" + month + "/" + year + "</b>")
+				</script><br>
+
+			Current Time: &nbsp <script type="text/javascript">
+
+				var currentTime = new Date()
+				var hours = currentTime.getHours()
+				var minutes = currentTime.getMinutes()
+
+				if (minutes < 10)
+				minutes = "0" + minutes
+
+				var suffix = "AM";
+				if (hours >= 12) {
+				suffix = "PM";
+				hours = hours - 12;
+				}
+				if (hours == 0) {
+				hours = 12;
+				}
+
+	document.write("<b>" + hours + ":" + minutes + " " + suffix + "</b>")
+</script><br>
+	<script language="JavaScript">
+			VIH_BackColor = "transparent";
+			VIH_ForeColor = "#C5D9DE";
+			VIH_FontPix = "12";
+			VIH_DisplayFormat = "<p>Your IP: &nbsp %%IP%%<br>Host IP: &nbsp %%HOST%%";
+			VIH_DisplayOnPage = "yes";
+		</script></p>
+		<script language="JavaScript" src="../scripts.hashemian.com/js/visitorIPHOST.js.php"></script>
+<div id="browser"></div>
+<script>
+		txt = "<p>Browser Code Name: &nbsp " + navigator.appCodeName + "</br>";
+		txt+= "Browser Name: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp " + navigator.appName + "</br>";
+		txt+= "Cookies Enabled: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp " + navigator.cookieEnabled + "</br>";
+		txt+= "Platform: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp " + navigator.platform + "</br>";
+		
+		document.getElementById("browser").innerHTML=txt;
+
+</script><p></p>
+</div>
+	<div id="progress">
+		<p>Analysing...//<br><br>
+		<img src="-/img-index/progress.gif" alt="por.gif">
+		</p>
+	</div>
+</div>
+	<div id="foot">
+		<p><code>Copyright &copy; Jony's Blog. April 2015-2016.</code></p>
+			</div>
+		</div>
+	</body>
+</html>

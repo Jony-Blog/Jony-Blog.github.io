@@ -1,0 +1,100 @@
+/*#############################################################
+					Aluminium Security
+#############################################################*/
+
+
+body {
+	margin: 0;
+	background: url(index-css-img/index-bg.gif) repeat;
+	font: 12px "Lucida Sans Unicode",sans-serif;
+	color: #BBB;
+	line-height: 15px;
+}
+
+#box {
+	margin: 0 auto;
+	margin-top: 60px;
+	padding: 0;
+	height: 500px;
+	width: 900px;
+	background: #1B1D26;
+	border: 2px solid #454545;
+	border-radius: 13px 13px 13px 13px;
+	-moz-border-radius: 13px 13px 13px 13px;
+	-webkit-border: 13px 13px 13px 13px;
+}
+
+#boximg {
+	margin-top: 10px;
+	padding: 0;
+	height: 210px;
+	width: 900px;
+	border: none;
+}
+
+#boximg img {
+	border: none;
+	height: 290px;
+	width: 385px;
+}
+
+#analizebox {
+	margin: 0;
+	padding: 0;
+	height: 240px;
+	width: 900px;
+	border: 0;
+}
+
+#analize {
+	margin: 0;
+	padding: 0;
+	height: 240px;
+	width: 450px;
+	font-size: 12px;
+	border: none;
+	float: left;
+}
+
+#analize img {
+	margin-left: 5px;
+	border: none;
+	height: 20px;
+	width: 20px;
+}
+
+#analize p {
+	margin-left: 20px;
+	font-size: 12px;
+	color: #BBB;
+}
+
+#progress {
+	margin: 0;
+	padding: 0;
+	height: 240px;
+	width: 445px;
+	border: none;
+	float: right;
+}
+
+#progress p {
+	margin: 150px 0px 0px 0px;
+	font-size: 13px;
+	text-align: center;
+}
+
+#progress img {
+	border: none;
+	height: 5px;
+	width: 400px;
+	border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border: 5px 5px 5px 5px;
+}
+
+#foot p {
+	margin: 15px 0px 0px 0px;
+	text-align: center;
+	color: #787878;
+}
