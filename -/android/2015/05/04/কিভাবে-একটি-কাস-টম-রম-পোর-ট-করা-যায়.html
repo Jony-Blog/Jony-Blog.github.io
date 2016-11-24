@@ -11,14 +11,30 @@
   
 
 
+  <!-- Begin Jekyll SEO tag v2.1.0 -->
+<title>কিভাবে একটি কাস্টম রম পোর্ট করা যায় - Jony’s Blog</title>
+<meta property="og:title" content="কিভাবে একটি কাস্টম রম পোর্ট করা যায়" />
+<meta name="description" content="আজকে যা লিখব তা হল কি ভাবে আপনি mtk mobile এর জন্য কাস্টম রম বানাবেন !! এটা কাস্টম রম নিয়ে আমার প্রথম পোস্ট।" />
+<meta property="og:description" content="আজকে যা লিখব তা হল কি ভাবে আপনি mtk mobile এর জন্য কাস্টম রম বানাবেন !! এটা কাস্টম রম নিয়ে আমার প্রথম পোস্ট।" />
+<link rel="canonical" href="http://jony-blog.github.io/-/android/2015/05/04/%E0%A6%95%E0%A6%BF%E0%A6%AD%E0%A6%BE%E0%A6%AC%E0%A7%87-%E0%A6%8F%E0%A6%95%E0%A6%9F%E0%A6%BF-%E0%A6%95%E0%A6%BE%E0%A6%B8-%E0%A6%9F%E0%A6%AE-%E0%A6%B0%E0%A6%AE-%E0%A6%AA%E0%A7%8B%E0%A6%B0-%E0%A6%9F-%E0%A6%95%E0%A6%B0%E0%A6%BE-%E0%A6%AF%E0%A6%BE%E0%A6%AF%E0%A6%BC.html" />
+<meta property="og:url" content="http://jony-blog.github.io/-/android/2015/05/04/%E0%A6%95%E0%A6%BF%E0%A6%AD%E0%A6%BE%E0%A6%AC%E0%A7%87-%E0%A6%8F%E0%A6%95%E0%A6%9F%E0%A6%BF-%E0%A6%95%E0%A6%BE%E0%A6%B8-%E0%A6%9F%E0%A6%AE-%E0%A6%B0%E0%A6%AE-%E0%A6%AA%E0%A7%8B%E0%A6%B0-%E0%A6%9F-%E0%A6%95%E0%A6%B0%E0%A6%BE-%E0%A6%AF%E0%A6%BE%E0%A6%AF%E0%A6%BC.html" />
+<meta property="og:site_name" content="Jony’s Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2015-05-04T00:00:00+06:00" />
+<script type="application/ld+json">
+{"@context": "http://schema.org",
+"@type": "BlogPosting",
+"headline": "কিভাবে একটি কাস্টম রম পোর্ট করা যায়",
+"datePublished": "2015-05-04T00:00:00+06:00",
+"description": "আজকে যা লিখব তা হল কি ভাবে আপনি mtk mobile এর জন্য কাস্টম রম বানাবেন !! এটা কাস্টম রম নিয়ে আমার প্রথম পোস্ট।",
+"url": "http://jony-blog.github.io/-/android/2015/05/04/%E0%A6%95%E0%A6%BF%E0%A6%AD%E0%A6%BE%E0%A6%AC%E0%A7%87-%E0%A6%8F%E0%A6%95%E0%A6%9F%E0%A6%BF-%E0%A6%95%E0%A6%BE%E0%A6%B8-%E0%A6%9F%E0%A6%AE-%E0%A6%B0%E0%A6%AE-%E0%A6%AA%E0%A7%8B%E0%A6%B0-%E0%A6%9F-%E0%A6%95%E0%A6%B0%E0%A6%BE-%E0%A6%AF%E0%A6%BE%E0%A6%AF%E0%A6%BC.html"}</script>
+<!-- End Jekyll SEO tag -->
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Blog and website of Jony Bepary, Where He Share His Thoughts, stories and ideas.">
-  <meta name="author" content="Jony Bepary">
   <meta name="keywords" content="Sohel Ahmed Jony, Jonys blog, Jony Bepary, সোহেল আহমেদ জনি, জনি বেপারী ">
   <link rel="canonical" href="/-/android/2015/05/04/%E0%A6%95%E0%A6%BF%E0%A6%AD%E0%A6%BE%E0%A6%AC%E0%A7%87-%E0%A6%8F%E0%A6%95%E0%A6%9F%E0%A6%BF-%E0%A6%95%E0%A6%BE%E0%A6%B8-%E0%A6%9F%E0%A6%AE-%E0%A6%B0%E0%A6%AE-%E0%A6%AA%E0%A7%8B%E0%A6%B0-%E0%A6%9F-%E0%A6%95%E0%A6%B0%E0%A6%BE-%E0%A6%AF%E0%A6%BE%E0%A7%9F.html">
-  <title>Jony's Blog | কিভাবে একটি কাস্টম রম পোর্ট করা যায়</title>
 
   <!-- Bootstrap Core CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -203,7 +219,7 @@
 এটা কাস্টম রম নিয়ে আমার প্রথম পোস্ট। এবং আমি আপনাকে দেখাবো
 স্টক 4.2 থেকে অন্য একটি চাইনিজ 4.2  রম port করবেন (আপনি যেকোন chinese রম পোর্ট করতে পারেন কিন্তু ডাওনলডেড রম অবশ্যই এক android version হতে হবে এবং একই প্রসেসর এর হতে হবে। )</p>
 
-<h2 id="section">যা যা লাগবেঃ</h2>
+<h2 id="যা-যা-লাগবেঃ">যা যা লাগবেঃ</h2>
 
 <p>১. একটি mtk রুটেড ডিভাইস
 ২. আপনার মোবাইল <code class="highlighter-rouge">cwm</code> রিকভারি (কিভাবে পাবেন তা নিচে বর্ণনা করছি)
@@ -212,34 +228,36 @@
 ৫. কাস্টম রম (কি ভাবে পাবেন তাও বর্ণনা করছি)
 ৬. বুক ভরা সাহস নিজের কিছু লজিক, তার সাথে আগ্রহ আর অসামান্য ধৈর্য।</p>
 
-<h3 id="root-">Root কি?</h3>
+<h3 id="root-কি">Root কি?</h3>
 <p>রুট বা রুটিং মানে একটি এন্ড্রয়েড ডিভাইসের রুট-লেভেল অ্যাক্সেস পাওয়া। রুট/Root শব্দটা এসেছে লিনাক্স অপারেটিং সিস্টেমের ব্যবহারকারীদের কাছ থেকে। লিনাক্স ব্যবহারকারীদের মধ্যে যাদের রুট প্রিভিলেজ বা সুপারইউজার পারমিশন আছে তাদেরকে রুট ইউজার বলা হয়। এন্ড্রয়েড তৈরি হয়েছে লিনাক্স ভিত্তিক অপারেটিং সিস্টেম থেকে। এন্ড্রয়েড ডিভাইসে রুট পারমিশন মানে সিস্টেম ফাইল এডিট করার পারমিশন আদায় করা।এটা অবশ্যই লাগবে কিভাবে রুট অনেক টিটোরিয়াল পাবেন গুগল করলে।</p>
 
 <p><img src="/-/img/Post/custom-rom-porting/2.jpeg" alt="alt text" /></p>
 
-<h3 id="recovery--">Recovery কি ?</h3>
-<p>রিকভারী মোড অনেকটা কম্পিউটারের Bios Setup এর মত। যে কোন মোবাইলে খুবই সিম্পল একটা রিকভারী মোড দেয়া থাকে, কিন্তু এই রিকভারী মোড দিয়ে আপনি চাইলেও অনেক কিছু করতে পারবেন না। আর তাই অনেক ইউজার রা মোবাইল রুট করতে অনেকটা বাধ্য হন। মোবাইল রুট করার পর আসলে সব চাইতে জরুরী কাজ হয়ে পড়ে রিকভারী মোড ইন্সটল দেয়া। কেননা রিকভারী মোড ছাড়া কাষ্টম রম এবং রম ব্যাকাপ নেয়া যায়না। আর তাছাড়া ইচ্ছে করলেও রিকভারী মোড এ গিয়ে Flash দেয়া যায়না। আর তাই রুট করার পর সবচাইতে বড় কাজ হচ্ছে রিকভারী মোড ইনস্টল করা। তবে এই রিকভারী মোড ইনস্টল দেয়া কিন্তু খুব সহজ ব্যপার নয়। কিছু কিছু মোবাইলে রিকভারী মোড ইনস্টল দেয়া পানির মত সহজ। Walton এর সেট গুলোতে রিকভারী মোড ইনস্টল দেয়া খুবই সহজ। আবার সিম্ফনির কিছছু মডেল আছে যে গুলা রুট তো দূরে থাক, কাস্টম রম, রিকভারী কিছুই পাওয়া যায়না। যেগুলা আছে সেগুলাও ঠিক মত কাজ করেনা, ফলে মোবাইল Soft Brick হয় (শুধু বুট লোগো তে মোবাইল হ্যাং থাকে বা আটকে থাকে)। আর এই কারণেই সঠিক CWM বা TWRP রিকভারী ফাইল না বুঝে কখনই ইনষ্টল দেবেন না। আপনারটা যদি নেটে না পাওয়া যায়, তাহলেও কোন সমস্যযা নাই। আপনি খুব সহজেই তৈরী করে নিতে পারেন। অনেক ধরনের রিকভারি আছে সবচেয়ে পপুলার হলঃ 
-1. clockwork mode (cwm).
-2. team win recovery project (twrp).
-3. carliv touch recovey (ctr)</p>
+<h3 id="recovery-কি-">Recovery কি ?</h3>
+<p>রিকভারী মোড অনেকটা কম্পিউটারের Bios Setup এর মত। যে কোন মোবাইলে খুবই সিম্পল একটা রিকভারী মোড দেয়া থাকে, কিন্তু এই রিকভারী মোড দিয়ে আপনি চাইলেও অনেক কিছু করতে পারবেন না। আর তাই অনেক ইউজার রা মোবাইল রুট করতে অনেকটা বাধ্য হন। মোবাইল রুট করার পর আসলে সব চাইতে জরুরী কাজ হয়ে পড়ে রিকভারী মোড ইন্সটল দেয়া। কেননা রিকভারী মোড ছাড়া কাষ্টম রম এবং রম ব্যাকাপ নেয়া যায়না। আর তাছাড়া ইচ্ছে করলেও রিকভারী মোড এ গিয়ে Flash দেয়া যায়না। আর তাই রুট করার পর সবচাইতে বড় কাজ হচ্ছে রিকভারী মোড ইনস্টল করা। তবে এই রিকভারী মোড ইনস্টল দেয়া কিন্তু খুব সহজ ব্যপার নয়। কিছু কিছু মোবাইলে রিকভারী মোড ইনস্টল দেয়া পানির মত সহজ। Walton এর সেট গুলোতে রিকভারী মোড ইনস্টল দেয়া খুবই সহজ। আবার সিম্ফনির কিছছু মডেল আছে যে গুলা রুট তো দূরে থাক, কাস্টম রম, রিকভারী কিছুই পাওয়া যায়না। যেগুলা আছে সেগুলাও ঠিক মত কাজ করেনা, ফলে মোবাইল Soft Brick হয় (শুধু বুট লোগো তে মোবাইল হ্যাং থাকে বা আটকে থাকে)। আর এই কারণেই সঠিক CWM বা TWRP রিকভারী ফাইল না বুঝে কখনই ইনষ্টল দেবেন না। আপনারটা যদি নেটে না পাওয়া যায়, তাহলেও কোন সমস্যযা নাই। আপনি খুব সহজেই তৈরী করে নিতে পারেন। অনেক ধরনের রিকভারি আছে সবচেয়ে পপুলার হলঃ</p>
+<ol>
+  <li>clockwork mode (cwm).</li>
+  <li>team win recovery project (twrp).</li>
+  <li>carliv touch recovey (ctr)</li>
+</ol>
 
 <p>এবং আরও অনেক।</p>
 
-<h3 id="nandroid-backup-">Nandroid backup কি?</h3>
+<h3 id="nandroid-backup-কি">Nandroid backup কি?</h3>
 <p>Nandroid backup হল আপনার অ্যান্ড্রয়েড ডিভাইসের সম্পূর্ণ সিস্টেমের ব্যাকআপ। আপনি যদি কোন ভাবে আপনার ডিভাইসটি সফট ব্রিক করে ফেলেন তাহলে আপনি Nandroid Backup রি-স্টোর করার মাধ্যমে আপনার ডিভাইসটিকে আগের অবস্থায় ফিরিয়ে নিয়ে যেতে পারবেন। আর অবশ্যই প্রয়োজনীয়।</p>
 
 <p>##স্টক রম
 সহজ কথায় কাস্টম রম মানে হল আপনার অ্যান্ড্রয়েড স্মার্টফোন অথবা ট্যাবলেট এর অপারেটিং সিস্টেম । বিভিন্ন ব্র্যান্ডের অ্যান্ড্রয়েড ডিভাইস গুলোতে ম্যানুফ্যাকচারার কর্তৃক বিভিন্ন ফার্মওয়্যার বা অপারেটিং সিস্টেম দেয়া থাকে, যেমন স্যামসাঙ ডিভাইস গুলোতে Touchwiz এবং HTC ডিভাইস গুলোতে Sense।কিন্তু স্টক রমে রুট প্রিভিলেজ থাকে না । স্টক রমে তেমন কাস্টমাইজেশন সুবিধা পাবেন না। আপনার ডিভাইসকে কোন নিয়ন্ত্রণ করার সুযোগ পাবেন না। এছাড়া স্টক রমে mtk ডিভাইসের জন্য অ্যান্ড্রয়েডের সবচেয়ে আপডেটেড ভার্সন ইন্সটল করতে পারবেন না তা বলব না কিন্তু পেতে পেতে অনেক দেরি করতে।</p>
 
-<h3 id="custom-rom-">Custom Rom কি?</h3>
+<h3 id="custom-rom-কি">Custom Rom কি?</h3>
 <p>সহজ কথায় কাস্টম রম মানে হল আপনার অ্যান্ড্রয়েড স্মার্টফোন অথবা ট্যাবলেট এর জন্য একটি Modified অপারেটিং সিস্টেম। বিভিন্ন ব্র্যান্ডের অ্যান্ড্রয়েড ডিভাইস গুলোতে ম্যানুফ্যাকচারার কর্তৃক বিভিন্ন ফার্মওয়্যার বা অপারেটিং সিস্টেম দেয়া থাকে, যেমন স্যামসাঙ ডিভাইস গুলোতে Touchwiz এবং HTC ডিভাইস গুলোতে Sense. কাস্টম রমে আপনি স্টক অপারেটিং সিস্টেম এর তুলনায় অনেক বেশি সুবিধা পাওয়া যায়। এছাড়া কাস্টম রম আপনার ডিভাইসে অ্যান্ড্রয়েডের সবচেয়ে আপডেটেড ভার্সন ইন্সটল করার একটি সহজ পথ।
-নিচে mtk ডিভাইস এর কাস্টম রম পাবেন। (আপনি আপনার প্রসেসর অনুযায়ী ডাওনলোড করতে পারবেন) 
+নিচে mtk ডিভাইস এর কাস্টম রম পাবেন। (আপনি আপনার প্রসেসর অনুযায়ী ডাওনলোড করতে পারবেন)
 লিঙ্কঃ http://www.mtkroms.com/</p>
 
-<h3 id="section-1">পোর্টিং এর কাজ শুরু</h3>
+<h3 id="পোর্টিং-এর-কাজ-শুরু">পোর্টিং এর কাজ শুরু</h3>
 <p>হ্যাঁ এতখন যার জন্য অপেক্ষা করে ছিলাম নিচের step গুলো ফলো করুন।</p>
 
-<h4 id="section-2">স্টেপ ১</h4>
+<h4 id="স্টেপ-১">স্টেপ ১</h4>
 
 <p>ClockWorkMode Recovery Install
 তো শুরু করি প্রথমে আপনি clockworkmod recovery install করবেন
@@ -259,9 +277,9 @@
 
 <p><img src="/-/img/Post/custom-rom-porting/3.jpg" alt="alt text" /></p>
 
-<p>বিঃদ্রঃ আপনি যদি আগেই clock work mode ইন্সটল করা থাকে তো এই স্টেপ টি বাদ দিন।
-#### স্টেপ ২
-স্টক রম বের করা</p>
+<p>বিঃদ্রঃ আপনি যদি আগেই clock work mode ইন্সটল করা থাকে তো এই স্টেপ টি বাদ দিন।</p>
+<h4 id="স্টেপ-২">স্টেপ ২</h4>
+<p>স্টক রম বের করা</p>
 
 <p>এখন আপনার স্টক রম বের এখানে অনেক নিয়ম আছে কিন্তু আমি সবচেয়ে সহজ নিয়ম টি বলছি</p>
 
@@ -308,7 +326,7 @@
 
 <p>তার আপনার মেমরিতে একটি clock work mode নামে একটি ##ফোল্ডার পাবেন সেটি আপনার কম্পিউটার এ কপি করুন ব্যস আপনার কাজ শেষ স্টক রম পেয়ে গেলাম</p>
 
-<h4 id="section-3">স্টেপ ৩</h4>
+<h4 id="স্টেপ-৩">স্টেপ ৩</h4>
 
 <p>কাস্টম রম বানানো</p>
 
@@ -344,7 +362,7 @@
 
 <p>৫. এবার আপনার কাস্টম রম জিপ করুন</p>
 
-<h3 id="tips-for-patch--------">——–: Tips for patch:——–</h3>
+<h3 id="-tips-for-patch">——–: Tips for patch:——–</h3>
 
 <p>Copy “Stock Rom” to “Port Rom” (যদি কাজ না করে)</p>
 
@@ -358,33 +376,33 @@
 
 <p>লিস্টের ফাইল গুলো স্টক রম থেকে কাস্টম রমে copy করুন।</p>
 
-<h6 id="android-version-40-ics--41-jb--">এটা শুধু android version 4.0 (ICS) &amp; 4.1 (JB) কাজ করবে</h6>
+<h6 id="এটা-শুধু-android-version-40-ics--41-jb-কাজ-করবে">এটা শুধু android version 4.0 (ICS) &amp; 4.1 (JB) কাজ করবে</h6>
 
 <p>\system\lib\hw\camera.default.so \system\lib\libcamera_client.so \system\lib\libcameracustom.so \system\lib\libcameraprofile.so \system\lib\libcameraservice.so \system\lib\libmhal.so \system\lib\libmhalcontent.so \system\lib\libmhaldrv.so \system\lib\libmhalmdp.so \system\lib\libmhalpipe.so \system\lib\libmhalscenario.so \system\lib\libmhalutility.so \system\etc\permission\android.hardware.camera.front.xml \system\etc\permission\android.hardware.camera.xml</p>
 
-<h6 id="fm-radio-----">রেডিও জন্য - FM Radio কাজ না করলে :-</h6>
+<h6 id="রেডিও-জন্য---fm-radio-কাজ-না-করলে--">রেডিও জন্য - FM Radio কাজ না করলে :-</h6>
 
 <p>লিস্টের ফাইল গুলো স্টক রম থেকে কাস্টম রমে copy করুন।</p>
 
 <p>\system\etc\firmware\mt6620_patch_e3_hdr.bin \system\etc\firmware\mt6620_patch_e6_hdr.bin \system\etc\firmware\WMT.CFG \system\lib\modules\mtk_fm_drv.ko \system\lib\libfmcust.so</p>
 
-<h6 id="sd-card-----------">Sd card এর জন্য- এস ডি কার্ড মাউন্ট না হলে :-</h6>
+<h6 id="sd-card-এর-জন্য--এস-ডি-কার্ড-মাউন্ট-না-হলে--">Sd card এর জন্য- এস ডি কার্ড মাউন্ট না হলে :-</h6>
 
 <p>লিস্টের ফাইল গুলো স্টক রম থেকে কাস্টম রমে copy করুন।</p>
 
 <p>\system\etc\vold.fstab \system\etc\vold.fstab.nand</p>
 
-<h6 id="section-4">ওয়াইফাই জন্য - ওয়াইফাই কাজ না করলে :-</h6>
+<h6 id="ওয়াইফাই-জন্য---ওয়াইফাই-কাজ-না-করলে--">ওয়াইফাই জন্য - ওয়াইফাই কাজ না করলে :-</h6>
 
 <p>লিস্টের ফাইল গুলো স্টক রম থেকে কাস্টম রমে copy করুন। \system\lib\modules\mtk_stp_wmt.ko \system\lib\modules\mtk_wmt_wifi.ko</p>
 
-<h6 id="section-5">ব্লুটুথ জন্য - ব্লুটুথ কাজ না করলে :-</h6>
+<h6 id="ব্লুটুথ-জন্য---ব্লুটুথ-কাজ-না-করলে--">ব্লুটুথ জন্য - ব্লুটুথ কাজ না করলে :-</h6>
 
 <p>লিস্টের ফাইল গুলো স্টক রম থেকে কাস্টম রমে copy করুন।</p>
 
 <p>\system\lib\libbluetooth_mtk.so \system\lib\libbluetoothem_mtk.so</p>
 
-<h6 id="gps-----">Gps কাজ না করলে :-</h6>
+<h6 id="gps-কাজ-না-করলে--">Gps কাজ না করলে :-</h6>
 
 <p>লিস্টের ফাইল গুলো স্টক রম থেকে কাস্টম রমে copy করুন।</p>
 
@@ -570,7 +588,7 @@
     <p><br><br></p>
 
     <div class="container text-center">
-     <p>Copyright &copy; Jony Bepary 2016 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/legalcode">(CC BY-NC-SA 3.0)</a></p><br>
+     <p>Copyright &copy; Jony Bepary 2016 <a href="/-/LICENSE"> Copyright (c) 2016 Jony Beapary </a></p><br>
 
         
     </div>
