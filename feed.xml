@@ -3,8 +3,8 @@
 	<channel>
 		<title>Jony's Blog</title>
 		<description>Blog and website of Jony Bepary, Where He Share His Thoughts, stories and ideas.</description>
-		<link>http://jony-blog.github.io/-</link>
-		<atom:link href="http://jony-blog.github.io/-/feed.xml" rel="self" type="application/rss+xml" />
+		<link>http://localhost:4000/-</link>
+		<atom:link href="http://localhost:4000/-/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
 				<title>দেখুন কিভাবে উবুন্টু লাইভ সিডি/ ইউএসবি দিয়ে Grub-2 কে Repair, Restore, অথবা Reinstall করা যায়</title>
@@ -15,8 +15,8 @@
 </description>
 				
 				<pubDate>Mon, 13 Jul 2015 00:00:00 +0600</pubDate>
-				<link>http://jony-blog.github.io/-/linux/2015/07/13/%E0%A6%97-%E0%A6%B0%E0%A6%BE%E0%A6%AC-%E0%A6%B0%E0%A6%BF%E0%A6%AA%E0%A7%87%E0%A7%9F%E0%A6%BE%E0%A6%B0.html</link>
-				<guid isPermaLink="true">http://jony-blog.github.io/-/linux/2015/07/13/%E0%A6%97-%E0%A6%B0%E0%A6%BE%E0%A6%AC-%E0%A6%B0%E0%A6%BF%E0%A6%AA%E0%A7%87%E0%A7%9F%E0%A6%BE%E0%A6%B0.html</guid>
+				<link>http://localhost:4000/-/linux/2015/07/13/%E0%A6%97-%E0%A6%B0%E0%A6%BE%E0%A6%AC-%E0%A6%B0%E0%A6%BF%E0%A6%AA%E0%A7%87%E0%A7%9F%E0%A6%BE%E0%A6%B0.html</link>
+				<guid isPermaLink="true">http://localhost:4000/-/linux/2015/07/13/%E0%A6%97-%E0%A6%B0%E0%A6%BE%E0%A6%AC-%E0%A6%B0%E0%A6%BF%E0%A6%AA%E0%A7%87%E0%A7%9F%E0%A6%BE%E0%A6%B0.html</guid>
 			</item>
 		
 			<item>
@@ -29,8 +29,8 @@
 </description>
 				
 				<pubDate>Mon, 25 May 2015 00:00:00 +0600</pubDate>
-				<link>http://jony-blog.github.io/-/programming/2015/05/25/Teach-Yourself-Programming-in-Ten-Years.html</link>
-				<guid isPermaLink="true">http://jony-blog.github.io/-/programming/2015/05/25/Teach-Yourself-Programming-in-Ten-Years.html</guid>
+				<link>http://localhost:4000/-/programming/2015/05/25/Teach-Yourself-Programming-in-Ten-Years.html</link>
+				<guid isPermaLink="true">http://localhost:4000/-/programming/2015/05/25/Teach-Yourself-Programming-in-Ten-Years.html</guid>
 			</item>
 		
 			<item>
@@ -43,8 +43,8 @@
 </description>
 				
 				<pubDate>Tue, 19 May 2015 00:00:00 +0600</pubDate>
-				<link>http://jony-blog.github.io/-/programming/2015/05/19/%E0%A6%97%E0%A7%8B%E0%A6%B8-%E0%A6%9F-%E0%A6%AC-%E0%A6%B2%E0%A6%97%E0%A6%95%E0%A7%87-%E0%A6%97%E0%A6%BF%E0%A6%9F%E0%A6%B9%E0%A6%BE%E0%A6%AC%E0%A7%87-%E0%A6%B9%E0%A7%8B%E0%A6%B8-%E0%A6%9F-%E0%A6%95%E0%A6%B0%E0%A6%BE%E0%A6%B0-%E0%A6%AA%E0%A6%B0%E0%A6%BF%E0%A6%AA%E0%A7%82%E0%A6%B0-%E0%A6%A3-%E0%A6%97%E0%A6%BE%E0%A6%87%E0%A6%A1%E0%A6%B2%E0%A6%BE%E0%A6%87%E0%A6%A8.html</link>
-				<guid isPermaLink="true">http://jony-blog.github.io/-/programming/2015/05/19/%E0%A6%97%E0%A7%8B%E0%A6%B8-%E0%A6%9F-%E0%A6%AC-%E0%A6%B2%E0%A6%97%E0%A6%95%E0%A7%87-%E0%A6%97%E0%A6%BF%E0%A6%9F%E0%A6%B9%E0%A6%BE%E0%A6%AC%E0%A7%87-%E0%A6%B9%E0%A7%8B%E0%A6%B8-%E0%A6%9F-%E0%A6%95%E0%A6%B0%E0%A6%BE%E0%A6%B0-%E0%A6%AA%E0%A6%B0%E0%A6%BF%E0%A6%AA%E0%A7%82%E0%A6%B0-%E0%A6%A3-%E0%A6%97%E0%A6%BE%E0%A6%87%E0%A6%A1%E0%A6%B2%E0%A6%BE%E0%A6%87%E0%A6%A8.html</guid>
+				<link>http://localhost:4000/-/programming/2015/05/19/%E0%A6%97%E0%A7%8B%E0%A6%B8-%E0%A6%9F-%E0%A6%AC-%E0%A6%B2%E0%A6%97%E0%A6%95%E0%A7%87-%E0%A6%97%E0%A6%BF%E0%A6%9F%E0%A6%B9%E0%A6%BE%E0%A6%AC%E0%A7%87-%E0%A6%B9%E0%A7%8B%E0%A6%B8-%E0%A6%9F-%E0%A6%95%E0%A6%B0%E0%A6%BE%E0%A6%B0-%E0%A6%AA%E0%A6%B0%E0%A6%BF%E0%A6%AA%E0%A7%82%E0%A6%B0-%E0%A6%A3-%E0%A6%97%E0%A6%BE%E0%A6%87%E0%A6%A1%E0%A6%B2%E0%A6%BE%E0%A6%87%E0%A6%A8.html</link>
+				<guid isPermaLink="true">http://localhost:4000/-/programming/2015/05/19/%E0%A6%97%E0%A7%8B%E0%A6%B8-%E0%A6%9F-%E0%A6%AC-%E0%A6%B2%E0%A6%97%E0%A6%95%E0%A7%87-%E0%A6%97%E0%A6%BF%E0%A6%9F%E0%A6%B9%E0%A6%BE%E0%A6%AC%E0%A7%87-%E0%A6%B9%E0%A7%8B%E0%A6%B8-%E0%A6%9F-%E0%A6%95%E0%A6%B0%E0%A6%BE%E0%A6%B0-%E0%A6%AA%E0%A6%B0%E0%A6%BF%E0%A6%AA%E0%A7%82%E0%A6%B0-%E0%A6%A3-%E0%A6%97%E0%A6%BE%E0%A6%87%E0%A6%A1%E0%A6%B2%E0%A6%BE%E0%A6%87%E0%A6%A8.html</guid>
 			</item>
 		
 			<item>
@@ -56,8 +56,8 @@
 </description>
 				
 				<pubDate>Wed, 06 May 2015 00:00:00 +0600</pubDate>
-				<link>http://jony-blog.github.io/-/programming/2015/05/06/%E0%A6%AA-%E0%A6%B0%E0%A7%8B%E0%A6%97-%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%BF%E0%A6%82-%E0%A6%AD%E0%A6%BE%E0%A6%AC%E0%A6%A8%E0%A6%BE.html</link>
-				<guid isPermaLink="true">http://jony-blog.github.io/-/programming/2015/05/06/%E0%A6%AA-%E0%A6%B0%E0%A7%8B%E0%A6%97-%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%BF%E0%A6%82-%E0%A6%AD%E0%A6%BE%E0%A6%AC%E0%A6%A8%E0%A6%BE.html</guid>
+				<link>http://localhost:4000/-/programming/2015/05/06/%E0%A6%AA-%E0%A6%B0%E0%A7%8B%E0%A6%97-%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%BF%E0%A6%82-%E0%A6%AD%E0%A6%BE%E0%A6%AC%E0%A6%A8%E0%A6%BE.html</link>
+				<guid isPermaLink="true">http://localhost:4000/-/programming/2015/05/06/%E0%A6%AA-%E0%A6%B0%E0%A7%8B%E0%A6%97-%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%BF%E0%A6%82-%E0%A6%AD%E0%A6%BE%E0%A6%AC%E0%A6%A8%E0%A6%BE.html</guid>
 			</item>
 		
 			<item>
@@ -69,8 +69,8 @@
 </description>
 				
 				<pubDate>Tue, 05 May 2015 00:00:00 +0600</pubDate>
-				<link>http://jony-blog.github.io/-/programming/2015/05/05/%E0%A6%AC%E0%A6%BE%E0%A6%A8%E0%A6%B0-%E0%A6%AE%E0%A6%BE%E0%A6%AE%E0%A6%BE%E0%A6%B0-%E0%A6%AA-%E0%A6%B0%E0%A7%8B%E0%A6%97-%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%BF%E0%A6%82-%E0%A6%B2-%E0%A6%AF%E0%A6%BE%E0%A6%99-%E0%A6%97%E0%A7%81%E0%A7%9F%E0%A7%87%E0%A6%9C.html</link>
-				<guid isPermaLink="true">http://jony-blog.github.io/-/programming/2015/05/05/%E0%A6%AC%E0%A6%BE%E0%A6%A8%E0%A6%B0-%E0%A6%AE%E0%A6%BE%E0%A6%AE%E0%A6%BE%E0%A6%B0-%E0%A6%AA-%E0%A6%B0%E0%A7%8B%E0%A6%97-%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%BF%E0%A6%82-%E0%A6%B2-%E0%A6%AF%E0%A6%BE%E0%A6%99-%E0%A6%97%E0%A7%81%E0%A7%9F%E0%A7%87%E0%A6%9C.html</guid>
+				<link>http://localhost:4000/-/programming/2015/05/05/%E0%A6%AC%E0%A6%BE%E0%A6%A8%E0%A6%B0-%E0%A6%AE%E0%A6%BE%E0%A6%AE%E0%A6%BE%E0%A6%B0-%E0%A6%AA-%E0%A6%B0%E0%A7%8B%E0%A6%97-%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%BF%E0%A6%82-%E0%A6%B2-%E0%A6%AF%E0%A6%BE%E0%A6%99-%E0%A6%97%E0%A7%81%E0%A7%9F%E0%A7%87%E0%A6%9C.html</link>
+				<guid isPermaLink="true">http://localhost:4000/-/programming/2015/05/05/%E0%A6%AC%E0%A6%BE%E0%A6%A8%E0%A6%B0-%E0%A6%AE%E0%A6%BE%E0%A6%AE%E0%A6%BE%E0%A6%B0-%E0%A6%AA-%E0%A6%B0%E0%A7%8B%E0%A6%97-%E0%A6%B0%E0%A6%BE%E0%A6%AE%E0%A6%BF%E0%A6%82-%E0%A6%B2-%E0%A6%AF%E0%A6%BE%E0%A6%99-%E0%A6%97%E0%A7%81%E0%A7%9F%E0%A7%87%E0%A6%9C.html</guid>
 			</item>
 		
 			<item>
@@ -86,8 +86,8 @@
 </description>
 				
 				<pubDate>Mon, 04 May 2015 00:00:00 +0600</pubDate>
-				<link>http://jony-blog.github.io/-/android/2015/05/04/%E0%A6%95%E0%A6%BF%E0%A6%AD%E0%A6%BE%E0%A6%AC%E0%A7%87-%E0%A6%8F%E0%A6%95%E0%A6%9F%E0%A6%BF-%E0%A6%95%E0%A6%BE%E0%A6%B8-%E0%A6%9F%E0%A6%AE-%E0%A6%B0%E0%A6%AE-%E0%A6%AA%E0%A7%8B%E0%A6%B0-%E0%A6%9F-%E0%A6%95%E0%A6%B0%E0%A6%BE-%E0%A6%AF%E0%A6%BE%E0%A7%9F.html</link>
-				<guid isPermaLink="true">http://jony-blog.github.io/-/android/2015/05/04/%E0%A6%95%E0%A6%BF%E0%A6%AD%E0%A6%BE%E0%A6%AC%E0%A7%87-%E0%A6%8F%E0%A6%95%E0%A6%9F%E0%A6%BF-%E0%A6%95%E0%A6%BE%E0%A6%B8-%E0%A6%9F%E0%A6%AE-%E0%A6%B0%E0%A6%AE-%E0%A6%AA%E0%A7%8B%E0%A6%B0-%E0%A6%9F-%E0%A6%95%E0%A6%B0%E0%A6%BE-%E0%A6%AF%E0%A6%BE%E0%A7%9F.html</guid>
+				<link>http://localhost:4000/-/android/2015/05/04/%E0%A6%95%E0%A6%BF%E0%A6%AD%E0%A6%BE%E0%A6%AC%E0%A7%87-%E0%A6%8F%E0%A6%95%E0%A6%9F%E0%A6%BF-%E0%A6%95%E0%A6%BE%E0%A6%B8-%E0%A6%9F%E0%A6%AE-%E0%A6%B0%E0%A6%AE-%E0%A6%AA%E0%A7%8B%E0%A6%B0-%E0%A6%9F-%E0%A6%95%E0%A6%B0%E0%A6%BE-%E0%A6%AF%E0%A6%BE%E0%A7%9F.html</link>
+				<guid isPermaLink="true">http://localhost:4000/-/android/2015/05/04/%E0%A6%95%E0%A6%BF%E0%A6%AD%E0%A6%BE%E0%A6%AC%E0%A7%87-%E0%A6%8F%E0%A6%95%E0%A6%9F%E0%A6%BF-%E0%A6%95%E0%A6%BE%E0%A6%B8-%E0%A6%9F%E0%A6%AE-%E0%A6%B0%E0%A6%AE-%E0%A6%AA%E0%A7%8B%E0%A6%B0-%E0%A6%9F-%E0%A6%95%E0%A6%B0%E0%A6%BE-%E0%A6%AF%E0%A6%BE%E0%A7%9F.html</guid>
 			</item>
 		
 	</channel>
