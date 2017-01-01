@@ -3,8 +3,8 @@
 	<channel>
 		<title>Jony's Blog</title>
 		<description>Blog and website of Jony Bepary, Where He Share His Thoughts, stories and ideas.</description>
-		<link>http://localhost:4000/-</link>
-		<atom:link href="http://localhost:4000/-/feed.xml" rel="self" type="application/rss+xml" />
+		<link>http://jony-blog.github.io/-</link>
+		<atom:link href="http://jony-blog.github.io/-/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
 				<title>Arch Linux এবং কিছু কথা</title>
@@ -15,8 +15,8 @@
 </description>
 				
 				<pubDate>Mon, 05 Dec 2016 00:00:00 +0600</pubDate>
-				<link>http://localhost:4000/-/linux/2016/12/05/arch-linux-and-some.html</link>
-				<guid isPermaLink="true">http://localhost:4000/-/linux/2016/12/05/arch-linux-and-some.html</guid>
+				<link>http://jony-blog.github.io/-/linux/2016/12/05/arch-linux-and-some.html</link>
+				<guid isPermaLink="true">http://jony-blog.github.io/-/linux/2016/12/05/arch-linux-and-some.html</guid>
 			</item>
 		
 			<item>
@@ -28,8 +28,8 @@
 </description>
 				
 				<pubDate>Mon, 13 Jul 2015 00:00:00 +0600</pubDate>
-				<link>http://localhost:4000/-/linux/2015/07/13/grub-repair.html</link>
-				<guid isPermaLink="true">http://localhost:4000/-/linux/2015/07/13/grub-repair.html</guid>
+				<link>http://jony-blog.github.io/-/linux/2015/07/13/grub-repair.html</link>
+				<guid isPermaLink="true">http://jony-blog.github.io/-/linux/2015/07/13/grub-repair.html</guid>
 			</item>
 		
 			<item>
@@ -42,8 +42,8 @@
 </description>
 				
 				<pubDate>Tue, 19 May 2015 00:00:00 +0600</pubDate>
-				<link>http://localhost:4000/-/programming/2015/05/19/how-to-host-ghost-blog-on-github.html</link>
-				<guid isPermaLink="true">http://localhost:4000/-/programming/2015/05/19/how-to-host-ghost-blog-on-github.html</guid>
+				<link>http://jony-blog.github.io/-/programming/2015/05/19/how-to-host-ghost-blog-on-github.html</link>
+				<guid isPermaLink="true">http://jony-blog.github.io/-/programming/2015/05/19/how-to-host-ghost-blog-on-github.html</guid>
 			</item>
 		
 			<item>
@@ -55,8 +55,8 @@
 </description>
 				
 				<pubDate>Tue, 05 May 2015 00:00:00 +0600</pubDate>
-				<link>http://localhost:4000/-/programming/2015/05/05/monkey-mamar-progamming-language.html</link>
-				<guid isPermaLink="true">http://localhost:4000/-/programming/2015/05/05/monkey-mamar-progamming-language.html</guid>
+				<link>http://jony-blog.github.io/-/programming/2015/05/05/monkey-mamar-progamming-language.html</link>
+				<guid isPermaLink="true">http://jony-blog.github.io/-/programming/2015/05/05/monkey-mamar-progamming-language.html</guid>
 			</item>
 		
 			<item>
@@ -72,8 +72,8 @@
 </description>
 				
 				<pubDate>Mon, 04 May 2015 00:00:00 +0600</pubDate>
-				<link>http://localhost:4000/-/android/2015/05/04/how-to-port-a-custom-rom.html</link>
-				<guid isPermaLink="true">http://localhost:4000/-/android/2015/05/04/how-to-port-a-custom-rom.html</guid>
+				<link>http://jony-blog.github.io/-/android/2015/05/04/how-to-port-a-custom-rom.html</link>
+				<guid isPermaLink="true">http://jony-blog.github.io/-/android/2015/05/04/how-to-port-a-custom-rom.html</guid>
 			</item>
 		
 	</channel>
