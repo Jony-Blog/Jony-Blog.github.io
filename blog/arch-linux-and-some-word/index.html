@@ -25,6 +25,52 @@
 {"description":"আর্চ লিনাক্স হল লিনাক্স কার্নেল এর উপর ভিত্তি করে তৈরি একটা ডিস্ট্রো/অপারেটিং সিস্টেম। এটা ডেবিয়ান, উবুন্টু বা অন্য কোন ডিস্ট্রোর ভিত্তিতে বানানো হয় নি। এটা সম্পূর্ণ স্বাধীন কমিউনিটি সাপোর্ট এ গড়ে ওঠা অসাধারণ একটা লিনাক্স ডিস্ট্রো। এর তৈরির মুল মন্ত্রই হল KISS (Keep It Sort, Simple ) অর্থাৎ সিস্টেম অযথা জটিল না করে। যেখানে যতটুকু সম্ভব সেখানে সিস্টেমকে সিম্পল আর সোজা সাপ্টা রাখা। আর আর্চ লিনাক্সে তাই রাখা হয়েছে।","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://jony-blog.github.io/assets/banner.png"},"name":"Jony Bepary"},"headline":"Arch Linux এবং কিছু কথা","dateModified":"2016-12-05T11:38:00+06:00","datePublished":"2016-12-05T11:38:00+06:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://jony-blog.github.io/blog/arch-linux-and-some-word/"},"image":"http://jony-blog.github.io/assets/blog_pic/arch-linux/cover.jpg","url":"http://jony-blog.github.io/blog/arch-linux-and-some-word/","author":{"@type":"Person","name":"Jony Bepary"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
+<script type="application/ld+json">
+    {
+      "@context": "http://schema.org/",
+      "@type": "Person",
+      "image": "/assets/JHON.jpg"
+      "honorificPrefix": "MD.",
+      "name": "Jony Bepary",
+      "familyName": "Bepary"
+      "honorificSuffix": "King",
+      "disambiguatingDescription": "Jony Bepary is a Bangladeshi Software Scientist who is the creator, And the principal developer of the Amenominaka, which is Said to be the most powerful and easy Jekyll management tool",
+      "birthPlace": "Nawdoba, Janjira, Shariatpur",
+      "birthDate": "1997.10.25",
+      "height": "72 inches",
+      "gender": "male",
+      "memberOf": "Linux Bangladesh",
+      "nationality": "Bangladeshi",
+      "jobTitle": "Technical support of Software",
+      "knowsAbout": ["C", "Python", "Algorithm", "Web", "Full Stack"]
+      "knowsLanguage": "Bangla, English",
+      "email": "mailto:sohelahmedjony@gmail.com",
+      "url": http://jony-blog.github.io
+      "worksFor": {
+        "@type": "LocalBusiness",
+        "name": "RB Telecom"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "Bangladesh",
+        "addressLocality": "Jajira, Shariatpur",
+        "addressRegion": "Dhaka"
+        "addressStreet": "Project RS - 4, Nawdoba"
+        "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "23.40",
+        "longitude": "90.23"
+         }
+      },
+      "colleague": [
+        "https://deb108471.dhakaeducationboard.gov.bd",
+        "https://deb113652.dhakaeducationboard.gov.bd",
+        "https://deb110880.dhakaeducationboard.gov.bd"
+      ],
+
+    }
+    </script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-sclable=0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -66,6 +112,7 @@
 
 <!-- Android Lolipop Theme Color -->
 <meta name="theme-color" content=" rgb(0, 153, 255 ">
+
 </head>
 <body>
 
@@ -355,6 +402,7 @@
 </div>
 
 <!-- Introduce the module at the bottom of the page -->
+
 <footer id="bottom">
   <script src="/assets/css/bootstrap.min.css"></script>
 
@@ -444,5 +492,127 @@
     }
 </script>
 <script src="/assets/js/main.js"></script>
+<script>
+//open external links in a new window
+function external_new_window() {
+    for(var c = document.getElementsByTagName("a"), a = 0;a < c.length;a++) {
+    var b = c[a];
+    b.getAttribute("href") && b.hostname !== location.hostname && (b.target = "_blank")
+    }
+}
+//open PDF links in a new window
+function pdf_new_window ()
+{
+    if (!document.getElementsByTagName) return false;
+    var links = document.getElementsByTagName("a");
+    for (var eleLink=0; eleLink < links.length; eleLink ++) {
+    if ((links[eleLink].href.indexOf('.pdf') !== -1)||(links[eleLink].href.indexOf('.doc') !== -1)||(links[eleLink].href.indexOf('.docx') !== -1)) {
+        links[eleLink].onclick =
+        function() {
+            window.open(this.href);
+            return false;
+        }
+    }
+    }
+}
+pdf_new_window()
+external_new_window();
+</script>
+
+<style>
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.333%;
+    height: 0;
+    background: black;
+}
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+</style>
+
+<script>
+function get_youtube_id(url) {
+    var p = /^(?:https?:\/\/)?(?:www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/;
+    return (url.match(p)) ? RegExp.$1 : false;
+}
+function vimeo_embed(url,el) {
+    var id = false;
+    $.ajax({
+      url: 'https://vimeo.com/api/oembed.json?url='+url,
+      async: true,
+      success: function(response) {
+        if(response.video_id) {
+          id = response.video_id;
+          if(url.indexOf('autoplay=1') !== -1) var autoplay=1; else var autoplay=0;
+          if(url.indexOf('loop=1') !== -1) var loop=1; else var loop=0;
+          var theInnerHTML = '<div class="videoWrapper"><iframe src="https://player.vimeo.com/video/'+id+'/?byline=0&title=0&portrait=0';
+          if(autoplay==1) theInnerHTML += '&autoplay=1';
+          if(loop==1) theInnerHTML += '&loop=1';
+          theInnerHTML += '" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>';
+          el.innerHTML = theInnerHTML;
+        }
+      }
+    });
+}
+function video_embed() {
+    var p = document.getElementsByTagName('p');
+    for(var i = 0; i < p.length; i++) {
+        //check if this is an external url (that starts with https:// or http://
+        if (p[i].innerHTML.indexOf("http://") == 0 ||
+            p[i].innerHTML.indexOf("https://") == 0) {
+            var youtube_id = get_youtube_id(p[i].innerHTML);
+            if(youtube_id) {
+                if(p[i].innerHTML.indexOf('autoplay=1') !== -1) var autoplay=1; else var autoplay=0;
+                if(p[i].innerHTML.indexOf('loop=1') !== -1) var loop=1; else var loop=0;
+                var theInnerHTML = '<div class="videoWrapper"><iframe width="720" height="420" src="https://www.youtube.com/embed/' + youtube_id + '?rel=0&showinfo=0';
+                if(autoplay==1) theInnerHTML += '&autoplay=1';
+                if(loop==1) theInnerHTML += '&loop=1&playlist='+youtube_id+'&version=3';
+                theInnerHTML += '" frameborder="0" allowfullscreen></iframe></div>';
+                p[i].innerHTML = theInnerHTML;
+            }
+            if(p[i].innerHTML.indexOf('vimeo.com') !== -1) {
+                //ask vimeo for the id and place the embed
+                vimeo_embed(p[i].innerHTML,p[i]);
+            }
+        }
+    }
+}
+video_embed();
+
+function mp3_embed() {
+    var p = document.getElementsByTagName('p');
+    for(var i = 0; i < p.length; i++) {
+        if(p[i].innerHTML.indexOf('.mp3') !== -1) {
+            var str = p[i].innerHTML.split('?');
+            if(str.length == 1) str[1] = '';
+            var str1 = str[1];
+            str1 = str1.replace('&','').replace('&','');
+            str1 = str1.replace('autoplay=1','').replace('autoplay=0','');
+            str1 = str1.replace('loop=1','').replace('loop=0','');
+            str1 = str1.replace('controls=0','').replace('controls=1','');
+
+            if (str[0].lastIndexOf('.mp3', str[0].length - 4) === str[0].length - 4 && str1.length == 0) {
+                if(str[1].indexOf('autoplay=1') !== -1) var autoplay=1; else var autoplay=0;
+                if(str[1].indexOf('loop=1') !== -1) var loop=1; else var loop=0;
+                if(str[1].indexOf('controls=0') !== -1) var controls=0; else var controls=1;
+                var newInnerHTML = '<audio';
+                if(autoplay==1) newInnerHTML += ' autoplay';
+                if(loop==1) newInnerHTML += ' loop';
+                if(controls==1) newInnerHTML += ' controls';
+                newInnerHTML += '><source src="'+str[0]+'" type="audio/mpeg">Your browser does not support the audio element.</audio>';
+                p[i].innerHTML = newInnerHTML;
+            }
+        }
+    }
+}
+mp3_embed();
+</script>
+
 </body>
 </html>
