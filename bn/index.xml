@@ -9,7 +9,18 @@
       <link>https://jony-blog.github.io/papermod-cover.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 05 Dec 2016 11:38:00 +0600</lastBuildDate><atom:link href="https://jony-blog.github.io/bn/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 Nov 2021 19:07:24 +0600</lastBuildDate><atom:link href="https://jony-blog.github.io/bn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ক্ল্যাসিক্যাল ক্রিপ্টোগ্রাফি ও সিজার সাইফার</title>
+      <link>https://jony-blog.github.io/bn/posts/classic_cryptography_caeser_cipher/</link>
+      <pubDate>Tue, 02 Nov 2021 19:07:24 +0600</pubDate>
+      
+      <guid>https://jony-blog.github.io/bn/posts/classic_cryptography_caeser_cipher/</guid>
+      <description>ক্রিপ্টোলজি বা খাস বাংলায় বললে &amp;ldquo;তথ্য গুপ্তিকরন বিদ্যা&amp;rdquo; যা সহজ ভাষায় বললে কোন ইনফরমেশনকে কিছু নির্দিষ্ট নিয়ম মেনে বিকৃত বা রুপান্তর করার প্রক্রিয়া। যা ইনফরমেশনকে পড়ার অনুপযোগী করে ফেলে। যাতে কেউ যেন অনুমতি ব্যাতিত আরেকজনের ওই তথ্য দেখতে না পারে। আবার ওই বিকৃত ইনফরমেশনকে কিছু নির্দিষ্ট নিয়মে অবিকৃতও করা যায়।
+বিকৃত করার এই প্রসেসটাকে টাকে আমরা বলি এনক্রিপশন আর বিকৃত করা ইনফরমেশনকে পূর্বের অবস্থায় নিয়ে আসার প্রসেসকে বলি ডেক্রিপশন।
+//Encrypted by Caesar Cipher encrypt(&amp;#34;hello world&amp;#34;) //output : &amp;#34;khoor zruog&amp;#34; dencrypt(&amp;#34;khoor zruog&amp;#34;) //output : &amp;#34;hello world&amp;#34; হাজার বছর ধরে নিরাপদে বিভিন্ন তথ্য আদান প্রদান এবং সংরক্ষন করার জন্যও বিভিন্ন ধরনের এনক্রিপশন কৌশল ব্যবহার ও চর্চা হয়ে আসছে। আমাদের বর্তমান সভ্যতা আধুনিক ক্রিপ্টগ্রাফির ওপর দাড়িয়ে আছে। শিক্ষা, চিকিৎসা, ব্যাংকিং, ডিজিটাল ট্রান্সেকশন থেকে শুরু করে মিলিটারি, ইন্টারনেট, অর্থনীতি সব কিছুতেই এর বিস্তৃত ব্যবহার আছে।</description>
+    </item>
+    
     <item>
       <title>Arch Linux এবং কিছু কথা</title>
       <link>https://jony-blog.github.io/bn/posts/archlinux/</link>
