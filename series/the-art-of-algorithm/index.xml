@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>The Art of Algorithm on Jony&#39;s Blog</title>
+    <link>https://jony-blog.github.io/series/the-art-of-algorithm/</link>
+    <description>Recent content in The Art of Algorithm on Jony&#39;s Blog</description>
+    <image>
+      <url>https://jony-blog.github.io/papermod-cover.png</url>
+      <link>https://jony-blog.github.io/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 07 Jun 2021 04:50:54 +0600</lastBuildDate><atom:link href="https://jony-blog.github.io/series/the-art-of-algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Efficient Palindrome and Integer Slicing.</title>
+      <link>https://jony-blog.github.io/posts/efficient_palindrome_int_slicing/</link>
+      <pubDate>Mon, 07 Jun 2021 04:50:54 +0600</pubDate>
+      
+      <guid>https://jony-blog.github.io/posts/efficient_palindrome_int_slicing/</guid>
+      <description>Abstract Recently I came across a simple palindrome problem. Which inputs an integer number and check if it&amp;rsquo;s a palindrome. In case you don&amp;rsquo;t know, palindrome sequence of characters or number which reads the same backward as forward.
+The Palindrome Algorithms. These are very basic and simple problems to solve. And most of the time&amp;rsquo;s people tend to use an array, string, list, or any data structure of a similar manner to store data.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,1 +1,3 @@
-Sitemap: http://jony-blog.github.io/sitemap.xml
+User-agent: *
+Disallow:
+Sitemap: https://jony-blog.github.io/sitemap.xml

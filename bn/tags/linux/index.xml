@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>linux on জনির ব্লগ</title>
+    <link>https://jony-blog.github.io/bn/tags/linux/</link>
+    <description>Recent content in linux on জনির ব্লগ</description>
+    <image>
+      <url>https://jony-blog.github.io/papermod-cover.png</url>
+      <link>https://jony-blog.github.io/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 05 Dec 2016 11:38:00 +0600</lastBuildDate><atom:link href="https://jony-blog.github.io/bn/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Arch Linux এবং কিছু কথা</title>
+      <link>https://jony-blog.github.io/bn/posts/archlinux/</link>
+      <pubDate>Mon, 05 Dec 2016 11:38:00 +0600</pubDate>
+      
+      <guid>https://jony-blog.github.io/bn/posts/archlinux/</guid>
+      <description>আর্চ লিনাক্স হল লিনাক্স কার্নেল এর উপর ভিত্তি করে তৈরি একটা ডিস্ট্রো/অপারেটিং সিস্টেম। এটা সম্পূর্ণ স্বাধীন কমিউনিটি সাপোর্ট এ গড়ে ওঠা অসাধারণ একটা লিনাক্স ডিস্ট্রো। এর তৈরির মুল মন্ত্রই হল KISS (Keep It Sort, Simple ) মানে সিস্টেমকে অযথা জটিল না করে। যেখানে যতটুকু সম্ভব সেখানে সিস্টেমকে সিম্পল আর সোজা সাপ্টা রাখা।</description>
+    </item>
+    
+  </channel>
+</rss>
