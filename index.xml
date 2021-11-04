@@ -26,7 +26,7 @@ The Palindrome Algorithms. These are very basic and simple problems to solve. An
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jony-blog.github.io/aboutme/</guid>
-      <description>archives</description>
+      <description>{ &#34;@context&#34;: &#34;http://www.schema.org&#34;, &#34;@type&#34;: &#34;person&#34;, &#34;image&#34;: &#34;&#34;, &#34;name&#34;: &#34;Sohel Ahmed Jony&#34;, &#34;jobTitle&#34;: &#34;Computer Scientist&#34;, &#34;url&#34;: &#34;https://jony-blog.github.io&#34;, &#34;address&#34;: { &#34;@type&#34;: &#34;PostalAddress&#34;, &#34;streetAddress&#34;: &#34;mirpur, Dhaka&#34;, &#34;addressLocality&#34;: &#34;dhaka&#34;, &#34;addressRegion&#34;: &#34;dhaka&#34;, &#34;postalCode&#34;: &#34;1216&#34;, &#34;addressCountry&#34;: &#34;Bangladesh&#34; }, &#34;email&#34;: &#34;sohelahmedjony@gmail.com&#34; }  </description>
     </item>
     
     

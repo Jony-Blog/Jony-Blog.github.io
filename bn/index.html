@@ -1,314 +1,146 @@
-<!DOCTYPE html>
-<html lang="bn" dir="auto">
-
-<head><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<!doctype html><html lang=bn dir=auto>
+<head><meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name=robots content="index, follow">
 <title>জনির ব্লগ</title>
-
-<meta name="description" content="Welcome to My Blog. Here you&#39;ll find my understanding of various programming idioms. Things like Data Structure, Algorithm Analysis, Math many other things you can just imagine.">
-<meta name="author" content="Jony Bepary">
-<link rel="canonical" href="https://jony-blog.github.io/bn/" />
-<meta name="google-site-verification" content="fSvcx9yPlR4_weC443EoV9lp2Yw9Yy5WH0ceAsoUB8o" />
-<meta name="yandex-verification" content="e465631dc3e89728" />
-<link crossorigin="anonymous" href="/assets/css/stylesheet.min.6f60056d44d3f7eb69a4bc6c332b59960f3a995802bded244750232f33713c49.css" integrity="sha256-b2AFbUTT9&#43;tppLxsMytZlg86mVgCve0kR1AjLzNxPEk=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://jony-blog.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://jony-blog.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://jony-blog.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://jony-blog.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://jony-blog.github.io/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.88.1" />
-<link rel="alternate" type="application/rss+xml" href="https://jony-blog.github.io/bn/index.xml">
-<link rel="alternate" type="application/json" href="https://jony-blog.github.io/bn/index.json">
-<link rel="alternate" hreflang="en" href="https://jony-blog.github.io/" />
-<link rel="alternate" hreflang="bn" href="https://jony-blog.github.io/bn/" />
+<meta name=description content="Welcome to My Blog. Here you'll find my understanding of various programming idioms. Things like Data Structure, Algorithm Analysis, Math many other things you can just imagine.">
+<meta name=author content="Jony Bepary">
+<link rel=canonical href=https://jony-blog.github.io/bn/>
+<meta name=google-site-verification content="fSvcx9yPlR4_weC443EoV9lp2Yw9Yy5WH0ceAsoUB8o">
+<meta name=yandex-verification content="e465631dc3e89728">
+<link crossorigin=anonymous href=/assets/css/stylesheet.min.6f60056d44d3f7eb69a4bc6c332b59960f3a995802bded244750232f33713c49.css integrity="sha256-b2AFbUTT9+tppLxsMytZlg86mVgCve0kR1AjLzNxPEk=" rel="preload stylesheet" as=style>
+<link rel=icon href=https://jony-blog.github.io/favicon.ico>
+<link rel=icon type=image/png sizes=16x16 href=https://jony-blog.github.io/favicon-16x16.png>
+<link rel=icon type=image/png sizes=32x32 href=https://jony-blog.github.io/favicon-32x32.png>
+<link rel=apple-touch-icon href=https://jony-blog.github.io/apple-touch-icon.png>
+<link rel=mask-icon href=https://jony-blog.github.io/safari-pinned-tab.svg>
+<meta name=theme-color content="#2e2e33">
+<meta name=msapplication-TileColor content="#2e2e33">
+<meta name=generator content="Hugo 0.88.1">
+<link rel=alternate type=application/rss+xml href=https://jony-blog.github.io/bn/index.xml>
+<link rel=alternate type=application/json href=https://jony-blog.github.io/bn/index.json>
+<link rel=alternate hreflang=en href=https://jony-blog.github.io/>
+<link rel=alternate hreflang=bn href=https://jony-blog.github.io/bn/>
 <noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
-
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --hljs-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
-            }
-        }
-
-    </style>
+<style>#theme-toggle,.top-link{display:none}</style>
+<style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
 </noscript>
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-75627422-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script><meta property="og:title" content="জনির ব্লগ" />
-<meta property="og:description" content="Welcome to My Blog. Here you&#39;ll find my understanding of various programming idioms. Things like Data Structure, Algorithm Analysis, Math many other things you can just imagine." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://jony-blog.github.io/bn/" /><meta property="og:image" content="https://jony-blog.github.io/papermod-cover.png"/><meta property="og:site_name" content="জনির ব্লগ" />
-
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://jony-blog.github.io/papermod-cover.png"/>
-
-<meta name="twitter:title" content="জনির ব্লগ"/>
-<meta name="twitter:description" content="Welcome to My Blog. Here you&#39;ll find my understanding of various programming idioms. Things like Data Structure, Algorithm Analysis, Math many other things you can just imagine."/>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "জনির ব্লগ",
-  "url": "https://jony-blog.github.io/",
-  "description": "Welcome to My Blog. Here you\u0026#39;ll find my understanding of various programming idioms. Things like Data Structure, Algorithm Analysis, Math many other things you can just imagine.",
-  "thumbnailUrl": "https://jony-blog.github.io/favicon.ico",
-  "sameAs": [
-      "https://github.com/JonyBepary", "https://facebook.com/sa.jhone", "index.xml"
-  ]
-}
-</script>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-75627422-1','auto'),ga('send','pageview'))</script><meta property="og:title" content="জনির ব্লগ">
+<meta property="og:description" content="Welcome to My Blog. Here you'll find my understanding of various programming idioms. Things like Data Structure, Algorithm Analysis, Math many other things you can just imagine.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jony-blog.github.io/bn/"><meta property="og:image" content="https://jony-blog.github.io/papermod-cover.png"><meta property="og:site_name" content="জনির ব্লগ">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://jony-blog.github.io/papermod-cover.png">
+<meta name=twitter:title content="জনির ব্লগ">
+<meta name=twitter:description content="Welcome to My Blog. Here you'll find my understanding of various programming idioms. Things like Data Structure, Algorithm Analysis, Math many other things you can just imagine.">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Organization","name":"জনির ব্লগ","url":"https://jony-blog.github.io/","description":"Welcome to My Blog. Here you\u0026#39;ll find my understanding of various programming idioms. Things like Data Structure, Algorithm Analysis, Math many other things you can just imagine.","thumbnailUrl":"https://jony-blog.github.io/favicon.ico","sameAs":["https://github.com/JonyBepary","https://facebook.com/sa.jhone","index.xml"]}</script>
 </head>
-
-<body class="list" id="top">
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-    }
-
-</script>
-
-<header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="https://jony-blog.github.io/bn/" accesskey="h" title="জনির ব্লগ (Alt + H)">জনির ব্লগ</a>
-            <span class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-                <ul class="lang-switch"><li>|</li>
-                    <li>
-                        <a href="https://jony-blog.github.io/" title="English"
-                            aria-label="English">English</a>
-                    </li>
-                </ul>
-            </span>
-        </div>
-        <ul id="menu">
-            <li>
-                <a href="https://jony-blog.github.io/bn/archives/" title="আর্কাইভ">
-                    <span>আর্কাইভ</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://jony-blog.github.io/bn/categories" title="ক্যাটাগওরি">
-                    <span>ক্যাটাগওরি</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://jony-blog.github.io/bn/tags" title="ট্যাগস">
-                    <span>ট্যাগস</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://jony-blog.github.io/bn/search/" title="সার্চ">
-                    <span>সার্চ</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://jony-blog.github.io/bn/series" title="সিরিজ">
-                    <span>সিরিজ</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main class="main"> 
-<article class="first-entry home-info">
-    <header class="entry-header">
-        <h1>স্বাগত 👋</h1>
-    </header>
-    <section class="entry-content">
-        <p>মোর আগ্রহের সংগ্রহশালা</p>
-    </section>
-    <footer class="entry-footer">
-        <div class="social-icons">
-    <a href="https://github.com/JonyBepary" target="_blank" rel="noopener noreferrer me" title="Github">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-    stroke-linecap="round" stroke-linejoin="round">
-    <path
-        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-    </path>
-</svg>
-    </a>
-    <a href="https://facebook.com/sa.jhone" target="_blank" rel="noopener noreferrer me" title="Facebook">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-    stroke-linecap="round" stroke-linejoin="round">
-    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-</svg>
-    </a>
-    <a href="index.xml" target="_blank" rel="noopener noreferrer me" title="RsS">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-    stroke-linecap="round" stroke-linejoin="round">
-    <path d="M4 11a9 9 0 0 1 9 9" />
-    <path d="M4 4a16 16 0 0 1 16 16" />
-    <circle cx="5" cy="19" r="1" />
-</svg>
-    </a>
+<body class=list id=top>
+<script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
+<header class=header>
+<nav class=nav>
+<div class=logo>
+<a href=https://jony-blog.github.io/bn/ accesskey=h title="জনির ব্লগ (Alt + H)">জনির ব্লগ</a>
+<span class=logo-switches>
+<button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+</button>
+<ul class=lang-switch><li>|</li>
+<li>
+<a href=https://jony-blog.github.io/ title=English aria-label=English>English</a>
+</li>
+</ul>
+</span>
 </div>
-
-    </footer>
-</article>
-
-<article class="post-entry"> 
-<figure class="entry-cover"><img loading="lazy" src="https://raw.githubusercontent.com/Jony-Blog/jony-blog-Backend/main/content/posts/images/classic_chiper/al-kindi-banne1r.png" alt="">
-</figure>
-  <header class="entry-header">
-    <h2>ক্ল্যাসিক্যাল ক্রিপ্টোগ্রাফি ও সিজার সাইফার
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>ক্রিপ্টোলজি বা খাস বাংলায় বললে “তথ্য গুপ্তিকরন বিদ্যা” যা সহজ ভাষায় বললে কোন ইনফরমেশনকে কিছু নির্দিষ্ট নিয়ম মেনে বিকৃত বা রুপান্তর করার প্রক্রিয়া। যা ইনফরমেশনকে পড়ার অনুপযোগী করে ফেলে। যাতে কেউ যেন অনুমতি ব্যাতিত আরেকজনের ওই তথ্য দেখতে না পারে। আবার ওই বিকৃত ইনফরমেশনকে কিছু নির্দিষ্ট নিয়মে অবিকৃতও করা যায়।
-বিকৃত করার এই প্রসেসটাকে টাকে আমরা বলি এনক্রিপশন আর বিকৃত করা ইনফরমেশনকে পূর্বের অবস্থায় নিয়ে আসার প্রসেসকে বলি ডেক্রিপশন।
-//Encrypted by Caesar Cipher encrypt(&#34;hello world&#34;) //output : &#34;khoor zruog&#34; dencrypt(&#34;khoor zruog&#34;) //output : &#34;hello world&#34; হাজার বছর ধরে নিরাপদে বিভিন্ন তথ্য আদান প্রদান এবং সংরক্ষন করার জন্যও বিভিন্ন ধরনের এনক্রিপশন কৌশল ব্যবহার ও চর্চা হয়ে আসছে। আমাদের বর্তমান সভ্যতা আধুনিক ক্রিপ্টগ্রাফির ওপর দাড়িয়ে আছে। শিক্ষা, চিকিৎসা, ব্যাংকিং, ডিজিটাল ট্রান্সেকশন থেকে শুরু করে মিলিটারি, ইন্টারনেট, অর্থনীতি সব কিছুতেই এর বিস্তৃত ব্যবহার আছে।...</p>
-  </section>
-  <footer class="entry-footer"><span title='2021-11-02 19:07:24 +0600 +06'>November 2, 2021</span>&nbsp;·&nbsp;4 মিনিট&nbsp;·&nbsp;Jony Bepary</footer>
-  <a class="entry-link" aria-label="post link to ক্ল্যাসিক্যাল ক্রিপ্টোগ্রাফি ও সিজার সাইফার" href="https://jony-blog.github.io/bn/posts/classic_cryptography_caeser_cipher/"></a>
-</article>
-
-<article class="post-entry"> 
-<figure class="entry-cover"><img loading="lazy" src="https://raw.githubusercontent.com/Jony-Blog/jony-blog-Backend/main/content/posts/images/arch-linux/cover.jpg" alt="">
-</figure>
-  <header class="entry-header">
-    <h2>Arch Linux এবং কিছু কথা
-    </h2>
-  </header>
-  <section class="entry-content">
-    <p>আর্চ লিনাক্স হল লিনাক্স কার্নেল এর উপর ভিত্তি করে তৈরি একটা ডিস্ট্রো। এবং লিনাক্স কার্নেল এর ভিত্তি করে তৈরি প্রতিটি ওএসকে এক একটি ডিস্ট্রো বলে। এখন লিনাক্স এর গুণগান যদি গাওয়া শুরু করি তবে এটা মেগা না গিগা না একে বারে টেরা পোস্ট হয়ে যাবে। তাই আমি সেদিক যাচ্ছি না আশা করি একটু গুগল মামা না হলে স্রদ্ধেয় আদনান কায়ুম ভাই এর ব্লগ একটু ঘাটাঘাটি করলেই লিনাক্স সম্পর্কে আপনার জ্ঞানের ঘটি পুর্ন হবে। আর আজকে আমার আলোচনার বিষয় আর্চ লিনাক্স এর কিছু সুবিধা ও অসুবিধা আর অন্য ডিস্ট্রো সাথে তুলনা মূলক বৈশিষ্ট্যর মধ্যেই সীমাবদ্ধ থাকবে।...</p>
-  </section>
-  <footer class="entry-footer"><span title='2016-12-05 11:38:00 +0600 +06'>December 5, 2016</span>&nbsp;·&nbsp;11 মিনিট&nbsp;·&nbsp;Jony Bepary</footer>
-  <a class="entry-link" aria-label="post link to Arch Linux এবং কিছু কথা" href="https://jony-blog.github.io/bn/posts/arch-linux-and-some-word/"></a>
-</article>
-    </main>
-    
-<footer class="footer">
-    <span>&copy; 2021 <a href="https://jony-blog.github.io/bn/">জনির ব্লগ</a></span>
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
+<ul id=menu>
+<li>
+<a href=https://jony-blog.github.io/bn/archives/ title=আর্কাইভ>
+<span>আর্কাইভ</span>
 </a>
-
-<script>
-    let menu = document.getElementById('menu')
-    if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
-
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            document.body.classList.add('dark');
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
+</li>
+<li>
+<a href=https://jony-blog.github.io/bn/categories title=ক্যাটাগওরি>
+<span>ক্যাটাগওরি</span>
+</a>
+</li>
+<li>
+<a href=https://jony-blog.github.io/bn/tags title=ট্যাগস>
+<span>ট্যাগস</span>
+</a>
+</li>
+<li>
+<a href=https://jony-blog.github.io/bn/search/ title=সার্চ>
+<span>সার্চ</span>
+</a>
+</li>
+<li>
+<a href=https://jony-blog.github.io/bn/series title=সিরিজ>
+<span>সিরিজ</span>
+</a>
+</li>
+</ul>
+</nav>
+</header>
+<main class=main>
+<article class="first-entry home-info">
+<header class=entry-header>
+<h1>স্বাগত 👋</h1>
+</header>
+<section class=entry-content>
+<p>মোর আগ্রহের সংগ্রহশালা</p>
+</section>
+<footer class=entry-footer>
+<div class=social-icons>
+<a href=https://github.com/JonyBepary target=_blank rel="noopener noreferrer me" title=Github><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37.0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44.0 0020 4.77 5.07 5.07.0 0019.91 1S18.73.65 16 2.48a13.38 13.38.0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07.0 005 4.77 5.44 5.44.0 003.5 8.55c0 5.42 3.3 6.61 6.44 7A3.37 3.37.0 009 18.13V22"/></svg>
+</a>
+<a href=https://facebook.com/sa.jhone target=_blank rel="noopener noreferrer me" title=Facebook><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+</a>
+<a href=index.xml target=_blank rel="noopener noreferrer me" title=RsS><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 019 9"/><path d="M4 4a16 16 0 0116 16"/><circle cx="5" cy="19" r="1"/></svg>
+</a>
+</div>
+</footer>
+</article>
+<article class=post-entry>
+<figure class=entry-cover><img loading=lazy src=https://raw.githubusercontent.com/Jony-Blog/jony-blog-Backend/main/content/posts/images/classic_chiper/al-kindi-banne1r.png alt>
+</figure>
+<header class=entry-header>
+<h2>ক্ল্যাসিক্যাল ক্রিপ্টোগ্রাফি ও সিজার সাইফার
+</h2>
+</header>
+<section class=entry-content>
+<p>ক্রিপ্টোলজি বা খাস বাংলায় বললে “তথ্য গুপ্তিকরন বিদ্যা” যা সহজ ভাষায় বললে কোন ইনফরমেশনকে কিছু নির্দিষ্ট নিয়ম মেনে বিকৃত বা রুপান্তর করার প্রক্রিয়া। যা ইনফরমেশনকে পড়ার অনুপযোগী করে ফেলে। যাতে কেউ যেন অনুমতি ব্যাতিত আরেকজনের ওই তথ্য দেখতে না পারে। আবার ওই বিকৃত ইনফরমেশনকে কিছু নির্দিষ্ট নিয়মে অবিকৃতও করা যায়।
+বিকৃত করার এই প্রসেসটাকে টাকে আমরা বলি এনক্রিপশন আর বিকৃত করা ইনফরমেশনকে পূর্বের অবস্থায় নিয়ে আসার প্রসেসকে বলি ডেক্রিপশন।
+//Encrypted by Caesar Cipher encrypt("hello world") //output : "khoor zruog" dencrypt("khoor zruog") //output : "hello world" হাজার বছর ধরে নিরাপদে বিভিন্ন তথ্য আদান প্রদান এবং সংরক্ষন করার জন্যও বিভিন্ন ধরনের এনক্রিপশন কৌশল ব্যবহার ও চর্চা হয়ে আসছে। আমাদের বর্তমান সভ্যতা আধুনিক ক্রিপ্টগ্রাফির ওপর দাড়িয়ে আছে। শিক্ষা, চিকিৎসা, ব্যাংকিং, ডিজিটাল ট্রান্সেকশন থেকে শুরু করে মিলিটারি, ইন্টারনেট, অর্থনীতি সব কিছুতেই এর বিস্তৃত ব্যবহার আছে।...</p>
+</section>
+<footer class=entry-footer><span title="2021-11-02 19:07:24 +0600 +06">November 2, 2021</span>&nbsp;·&nbsp;4 মিনিট&nbsp;·&nbsp;Jony Bepary</footer>
+<a class=entry-link aria-label="post link to ক্ল্যাসিক্যাল ক্রিপ্টোগ্রাফি ও সিজার সাইফার" href=https://jony-blog.github.io/bn/posts/classic_cryptography_caeser_cipher/></a>
+</article>
+<article class=post-entry>
+<figure class=entry-cover><img loading=lazy src=https://raw.githubusercontent.com/Jony-Blog/jony-blog-Backend/main/content/posts/images/arch-linux/cover.jpg alt>
+</figure>
+<header class=entry-header>
+<h2>Arch Linux এবং কিছু কথা
+</h2>
+</header>
+<section class=entry-content>
+<p>আর্চ লিনাক্স হল লিনাক্স কার্নেল এর উপর ভিত্তি করে তৈরি একটা ডিস্ট্রো। এবং লিনাক্স কার্নেল এর ভিত্তি করে তৈরি প্রতিটি ওএসকে এক একটি ডিস্ট্রো বলে। এখন লিনাক্স এর গুণগান যদি গাওয়া শুরু করি তবে এটা মেগা না গিগা না একে বারে টেরা পোস্ট হয়ে যাবে। তাই আমি সেদিক যাচ্ছি না আশা করি একটু গুগল মামা না হলে স্রদ্ধেয় আদনান কায়ুম ভাই এর ব্লগ একটু ঘাটাঘাটি করলেই লিনাক্স সম্পর্কে আপনার জ্ঞানের ঘটি পুর্ন হবে। আর আজকে আমার আলোচনার বিষয় আর্চ লিনাক্স এর কিছু সুবিধা ও অসুবিধা আর অন্য ডিস্ট্রো সাথে তুলনা মূলক বৈশিষ্ট্যর মধ্যেই সীমাবদ্ধ থাকবে।...</p>
+</section>
+<footer class=entry-footer><span title="2016-12-05 11:38:00 +0600 +06">December 5, 2016</span>&nbsp;·&nbsp;11 মিনিট&nbsp;·&nbsp;Jony Bepary</footer>
+<a class=entry-link aria-label="post link to Arch Linux এবং কিছু কথা" href=https://jony-blog.github.io/bn/posts/arch-linux-and-some-word/></a>
+</article>
+</main>
+<footer class=footer>
+<span>&copy; 2021 <a href=https://jony-blog.github.io/bn/>জনির ব্লগ</a></span>
+<span>
+Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a>
+</span>
+</footer>
+<a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
+</a>
+<script>let menu=document.getElementById('menu');menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script>
+<script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script>
+<script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script>
 </body>
-
 </html>

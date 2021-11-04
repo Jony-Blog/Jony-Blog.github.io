@@ -1,487 +1,206 @@
-<!DOCTYPE html>
-<html lang="bn" dir="auto">
-
-<head><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<!doctype html><html lang=bn dir=auto>
+<head><meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name=robots content="index, follow">
 <title>ক্ল্যাসিক্যাল ক্রিপ্টোগ্রাফি ও সিজার সাইফার | জনির ব্লগ</title>
-<meta name="keywords" content="ক্লাসিক্যাল সাইফার, এনক্রিপশন, ক্রিপ্টোলজি, ক্রিপ্টোগ্রাফি, সিকিউরিটি" />
-<meta name="description" content="ক্রিপ্টোলজি বা খাস বাংলায় বললে &ldquo;তথ্য গুপ্তিকরন বিদ্যা&rdquo; যা সহজ ভাষায় বললে কোন ইনফরমেশনকে কিছু নির্দিষ্ট নিয়ম মেনে বিকৃত বা রুপান্তর করার প্রক্রিয়া। যা ইনফরমেশনকে পড়ার অনুপযোগী করে ফেলে। যাতে কেউ যেন অনুমতি ব্যাতিত আরেকজনের ওই তথ্য দেখতে না পারে। আবার ওই বিকৃত ইনফরমেশনকে কিছু নির্দিষ্ট নিয়মে অবিকৃতও করা যায়।
+<meta name=keywords content="ক্লাসিক্যাল সাইফার,এনক্রিপশন,ক্রিপ্টোলজি,ক্রিপ্টোগ্রাফি,সিকিউরিটি">
+<meta name=description content="ক্রিপ্টোলজি বা খাস বাংলায় বললে &ldquo;তথ্য গুপ্তিকরন বিদ্যা&rdquo; যা সহজ ভাষায় বললে কোন ইনফরমেশনকে কিছু নির্দিষ্ট নিয়ম মেনে বিকৃত বা রুপান্তর করার প্রক্রিয়া। যা ইনফরমেশনকে পড়ার অনুপযোগী করে ফেলে। যাতে কেউ যেন অনুমতি ব্যাতিত আরেকজনের ওই তথ্য দেখতে না পারে। আবার ওই বিকৃত ইনফরমেশনকে কিছু নির্দিষ্ট নিয়মে অবিকৃতও করা যায়।
 বিকৃত করার এই প্রসেসটাকে টাকে আমরা বলি এনক্রিপশন আর বিকৃত করা ইনফরমেশনকে পূর্বের অবস্থায় নিয়ে আসার প্রসেসকে বলি ডেক্রিপশন।
 //Encrypted by Caesar Cipher encrypt(&#34;hello world&#34;) //output : &#34;khoor zruog&#34; dencrypt(&#34;khoor zruog&#34;) //output : &#34;hello world&#34; হাজার বছর ধরে নিরাপদে বিভিন্ন তথ্য আদান প্রদান এবং সংরক্ষন করার জন্যও বিভিন্ন ধরনের এনক্রিপশন কৌশল ব্যবহার ও চর্চা হয়ে আসছে। আমাদের বর্তমান সভ্যতা আধুনিক ক্রিপ্টগ্রাফির ওপর দাড়িয়ে আছে। শিক্ষা, চিকিৎসা, ব্যাংকিং, ডিজিটাল ট্রান্সেকশন থেকে শুরু করে মিলিটারি, ইন্টারনেট, অর্থনীতি সব কিছুতেই এর বিস্তৃত ব্যবহার আছে।">
-<meta name="author" content="Jony Bepary">
-<link rel="canonical" href="https://jony-blog.github.io/bn/posts/classic_cryptography_caeser_cipher/" />
-<meta name="google-site-verification" content="fSvcx9yPlR4_weC443EoV9lp2Yw9Yy5WH0ceAsoUB8o" />
-<meta name="yandex-verification" content="e465631dc3e89728" />
-<link crossorigin="anonymous" href="/assets/css/stylesheet.min.6f60056d44d3f7eb69a4bc6c332b59960f3a995802bded244750232f33713c49.css" integrity="sha256-b2AFbUTT9&#43;tppLxsMytZlg86mVgCve0kR1AjLzNxPEk=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
-    onload="hljs.initHighlightingOnLoad();"></script>
-<link rel="icon" href="https://jony-blog.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://jony-blog.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://jony-blog.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://jony-blog.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://jony-blog.github.io/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.88.1" />
-<link rel="alternate" hreflang="bn" href="https://jony-blog.github.io/bn/posts/classic_cryptography_caeser_cipher/" />
+<meta name=author content="Jony Bepary">
+<link rel=canonical href=https://jony-blog.github.io/bn/posts/classic_cryptography_caeser_cipher/>
+<meta name=google-site-verification content="fSvcx9yPlR4_weC443EoV9lp2Yw9Yy5WH0ceAsoUB8o">
+<meta name=yandex-verification content="e465631dc3e89728">
+<link crossorigin=anonymous href=/assets/css/stylesheet.min.6f60056d44d3f7eb69a4bc6c332b59960f3a995802bded244750232f33713c49.css integrity="sha256-b2AFbUTT9+tppLxsMytZlg86mVgCve0kR1AjLzNxPEk=" rel="preload stylesheet" as=style>
+<script defer crossorigin=anonymous src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script>
+<link rel=icon href=https://jony-blog.github.io/favicon.ico>
+<link rel=icon type=image/png sizes=16x16 href=https://jony-blog.github.io/favicon-16x16.png>
+<link rel=icon type=image/png sizes=32x32 href=https://jony-blog.github.io/favicon-32x32.png>
+<link rel=apple-touch-icon href=https://jony-blog.github.io/apple-touch-icon.png>
+<link rel=mask-icon href=https://jony-blog.github.io/safari-pinned-tab.svg>
+<meta name=theme-color content="#2e2e33">
+<meta name=msapplication-TileColor content="#2e2e33">
+<meta name=generator content="Hugo 0.88.1">
+<link rel=alternate hreflang=bn href=https://jony-blog.github.io/bn/posts/classic_cryptography_caeser_cipher/>
 <noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
-
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --hljs-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
-            }
-        }
-
-    </style>
+<style>#theme-toggle,.top-link{display:none}</style>
+<style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
 </noscript>
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-75627422-1', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script><meta property="og:title" content="ক্ল্যাসিক্যাল ক্রিপ্টোগ্রাফি ও সিজার সাইফার" />
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-75627422-1','auto'),ga('send','pageview'))</script><meta property="og:title" content="ক্ল্যাসিক্যাল ক্রিপ্টোগ্রাফি ও সিজার সাইফার">
 <meta property="og:description" content="ক্রিপ্টোলজি বা খাস বাংলায় বললে &ldquo;তথ্য গুপ্তিকরন বিদ্যা&rdquo; যা সহজ ভাষায় বললে কোন ইনফরমেশনকে কিছু নির্দিষ্ট নিয়ম মেনে বিকৃত বা রুপান্তর করার প্রক্রিয়া। যা ইনফরমেশনকে পড়ার অনুপযোগী করে ফেলে। যাতে কেউ যেন অনুমতি ব্যাতিত আরেকজনের ওই তথ্য দেখতে না পারে। আবার ওই বিকৃত ইনফরমেশনকে কিছু নির্দিষ্ট নিয়মে অবিকৃতও করা যায়।
 বিকৃত করার এই প্রসেসটাকে টাকে আমরা বলি এনক্রিপশন আর বিকৃত করা ইনফরমেশনকে পূর্বের অবস্থায় নিয়ে আসার প্রসেসকে বলি ডেক্রিপশন।
-//Encrypted by Caesar Cipher encrypt(&#34;hello world&#34;) //output : &#34;khoor zruog&#34; dencrypt(&#34;khoor zruog&#34;) //output : &#34;hello world&#34; হাজার বছর ধরে নিরাপদে বিভিন্ন তথ্য আদান প্রদান এবং সংরক্ষন করার জন্যও বিভিন্ন ধরনের এনক্রিপশন কৌশল ব্যবহার ও চর্চা হয়ে আসছে। আমাদের বর্তমান সভ্যতা আধুনিক ক্রিপ্টগ্রাফির ওপর দাড়িয়ে আছে। শিক্ষা, চিকিৎসা, ব্যাংকিং, ডিজিটাল ট্রান্সেকশন থেকে শুরু করে মিলিটারি, ইন্টারনেট, অর্থনীতি সব কিছুতেই এর বিস্তৃত ব্যবহার আছে।" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://jony-blog.github.io/bn/posts/classic_cryptography_caeser_cipher/" />
-<meta property="og:image" content="https://raw.githubusercontent.com/Jony-Blog/jony-blog-Backend/main/content/posts/images/classic_chiper/al-kindi-banne1r.png" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-11-02T19:07:24&#43;06:00" />
-<meta property="article:modified_time" content="2021-11-02T19:07:24&#43;06:00" /><meta property="og:site_name" content="জনির ব্লগ" />
-<meta property="og:see_also" content="https://jony-blog.github.io/bn/posts/arch-linux-and-some-word/" />
-
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://raw.githubusercontent.com/Jony-Blog/jony-blog-Backend/main/content/posts/images/classic_chiper/al-kindi-banne1r.png" />
-<meta name="twitter:title" content="ক্ল্যাসিক্যাল ক্রিপ্টোগ্রাফি ও সিজার সাইফার"/>
-<meta name="twitter:description" content="ক্রিপ্টোলজি বা খাস বাংলায় বললে &ldquo;তথ্য গুপ্তিকরন বিদ্যা&rdquo; যা সহজ ভাষায় বললে কোন ইনফরমেশনকে কিছু নির্দিষ্ট নিয়ম মেনে বিকৃত বা রুপান্তর করার প্রক্রিয়া। যা ইনফরমেশনকে পড়ার অনুপযোগী করে ফেলে। যাতে কেউ যেন অনুমতি ব্যাতিত আরেকজনের ওই তথ্য দেখতে না পারে। আবার ওই বিকৃত ইনফরমেশনকে কিছু নির্দিষ্ট নিয়মে অবিকৃতও করা যায়।
+//Encrypted by Caesar Cipher encrypt(&#34;hello world&#34;) //output : &#34;khoor zruog&#34; dencrypt(&#34;khoor zruog&#34;) //output : &#34;hello world&#34; হাজার বছর ধরে নিরাপদে বিভিন্ন তথ্য আদান প্রদান এবং সংরক্ষন করার জন্যও বিভিন্ন ধরনের এনক্রিপশন কৌশল ব্যবহার ও চর্চা হয়ে আসছে। আমাদের বর্তমান সভ্যতা আধুনিক ক্রিপ্টগ্রাফির ওপর দাড়িয়ে আছে। শিক্ষা, চিকিৎসা, ব্যাংকিং, ডিজিটাল ট্রান্সেকশন থেকে শুরু করে মিলিটারি, ইন্টারনেট, অর্থনীতি সব কিছুতেই এর বিস্তৃত ব্যবহার আছে।">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://jony-blog.github.io/bn/posts/classic_cryptography_caeser_cipher/">
+<meta property="og:image" content="https://raw.githubusercontent.com/Jony-Blog/jony-blog-Backend/main/content/posts/images/classic_chiper/al-kindi-banne1r.png"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2021-11-02T19:07:24+06:00">
+<meta property="article:modified_time" content="2021-11-02T19:07:24+06:00"><meta property="og:site_name" content="জনির ব্লগ">
+<meta property="og:see_also" content="https://jony-blog.github.io/bn/posts/arch-linux-and-some-word/">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://raw.githubusercontent.com/Jony-Blog/jony-blog-Backend/main/content/posts/images/classic_chiper/al-kindi-banne1r.png">
+<meta name=twitter:title content="ক্ল্যাসিক্যাল ক্রিপ্টোগ্রাফি ও সিজার সাইফার">
+<meta name=twitter:description content="ক্রিপ্টোলজি বা খাস বাংলায় বললে &ldquo;তথ্য গুপ্তিকরন বিদ্যা&rdquo; যা সহজ ভাষায় বললে কোন ইনফরমেশনকে কিছু নির্দিষ্ট নিয়ম মেনে বিকৃত বা রুপান্তর করার প্রক্রিয়া। যা ইনফরমেশনকে পড়ার অনুপযোগী করে ফেলে। যাতে কেউ যেন অনুমতি ব্যাতিত আরেকজনের ওই তথ্য দেখতে না পারে। আবার ওই বিকৃত ইনফরমেশনকে কিছু নির্দিষ্ট নিয়মে অবিকৃতও করা যায়।
 বিকৃত করার এই প্রসেসটাকে টাকে আমরা বলি এনক্রিপশন আর বিকৃত করা ইনফরমেশনকে পূর্বের অবস্থায় নিয়ে আসার প্রসেসকে বলি ডেক্রিপশন।
-//Encrypted by Caesar Cipher encrypt(&#34;hello world&#34;) //output : &#34;khoor zruog&#34; dencrypt(&#34;khoor zruog&#34;) //output : &#34;hello world&#34; হাজার বছর ধরে নিরাপদে বিভিন্ন তথ্য আদান প্রদান এবং সংরক্ষন করার জন্যও বিভিন্ন ধরনের এনক্রিপশন কৌশল ব্যবহার ও চর্চা হয়ে আসছে। আমাদের বর্তমান সভ্যতা আধুনিক ক্রিপ্টগ্রাফির ওপর দাড়িয়ে আছে। শিক্ষা, চিকিৎসা, ব্যাংকিং, ডিজিটাল ট্রান্সেকশন থেকে শুরু করে মিলিটারি, ইন্টারনেট, অর্থনীতি সব কিছুতেই এর বিস্তৃত ব্যবহার আছে।"/>
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://jony-blog.github.io/bn/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "ক্ল্যাসিক্যাল ক্রিপ্টোগ্রাফি ও সিজার সাইফার",
-      "item": "https://jony-blog.github.io/bn/posts/classic_cryptography_caeser_cipher/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "ক্ল্যাসিক্যাল ক্রিপ্টোগ্রাফি ও সিজার সাইফার",
-  "name": "ক্ল্যাসিক্যাল ক্রিপ্টোগ্রাফি ও সিজার সাইফার",
-  "description": "ক্রিপ্টোলজি বা খাস বাংলায় বললে \u0026ldquo;তথ্য গুপ্তিকরন বিদ্যা\u0026rdquo; যা সহজ ভাষায় বললে কোন ইনফরমেশনকে কিছু নির্দিষ্ট নিয়ম মেনে বিকৃত বা রুপান্তর করার প্রক্রিয়া। যা ইনফরমেশনকে পড়ার অনুপযোগী করে ফেলে। যাতে কেউ যেন অনুমতি ব্যাতিত আরেকজনের ওই তথ্য দেখতে না পারে। আবার ওই বিকৃত ইনফরমেশনকে কিছু নির্দিষ্ট নিয়মে অবিকৃতও করা যায়।\nবিকৃত করার এই প্রসেসটাকে টাকে আমরা বলি এনক্রিপশন আর বিকৃত করা ইনফরমেশনকে পূর্বের অবস্থায় নিয়ে আসার প্রসেসকে বলি ডেক্রিপশন।\n//Encrypted by Caesar Cipher encrypt(\u0026#34;hello world\u0026#34;) //output : \u0026#34;khoor zruog\u0026#34; dencrypt(\u0026#34;khoor zruog\u0026#34;) //output : \u0026#34;hello world\u0026#34; হাজার বছর ধরে নিরাপদে বিভিন্ন তথ্য আদান প্রদান এবং সংরক্ষন করার জন্যও বিভিন্ন ধরনের এনক্রিপশন কৌশল ব্যবহার ও চর্চা হয়ে আসছে। আমাদের বর্তমান সভ্যতা আধুনিক ক্রিপ্টগ্রাফির ওপর দাড়িয়ে আছে। শিক্ষা, চিকিৎসা, ব্যাংকিং, ডিজিটাল ট্রান্সেকশন থেকে শুরু করে মিলিটারি, ইন্টারনেট, অর্থনীতি সব কিছুতেই এর বিস্তৃত ব্যবহার আছে।",
-  "keywords": [
-    "ক্লাসিক্যাল সাইফার", "এনক্রিপশন", "ক্রিপ্টোলজি", "ক্রিপ্টোগ্রাফি", "সিকিউরিটি"
-  ],
-  "articleBody": "ক্রিপ্টোলজি বা খাস বাংলায় বললে “তথ্য গুপ্তিকরন বিদ্যা” যা সহজ ভাষায় বললে কোন ইনফরমেশনকে কিছু নির্দিষ্ট নিয়ম মেনে বিকৃত বা রুপান্তর করার প্রক্রিয়া। যা ইনফরমেশনকে পড়ার অনুপযোগী করে ফেলে। যাতে কেউ যেন অনুমতি ব্যাতিত আরেকজনের ওই তথ্য দেখতে না পারে। আবার ওই বিকৃত ইনফরমেশনকে কিছু নির্দিষ্ট নিয়মে অবিকৃতও করা যায়।\nবিকৃত করার এই প্রসেসটাকে টাকে আমরা বলি এনক্রিপশন আর বিকৃত করা ইনফরমেশনকে পূর্বের অবস্থায় নিয়ে আসার প্রসেসকে বলি ডেক্রিপশন।\n//Encrypted by Caesar Cipher encrypt(\"hello world\") //output : \"khoor zruog\" dencrypt(\"khoor zruog\") //output : \"hello world\" হাজার বছর ধরে নিরাপদে বিভিন্ন তথ্য আদান প্রদান এবং সংরক্ষন করার জন্যও বিভিন্ন ধরনের এনক্রিপশন কৌশল ব্যবহার ও চর্চা হয়ে আসছে। আমাদের বর্তমান সভ্যতা আধুনিক ক্রিপ্টগ্রাফির ওপর দাড়িয়ে আছে। শিক্ষা, চিকিৎসা, ব্যাংকিং, ডিজিটাল ট্রান্সেকশন থেকে শুরু করে মিলিটারি, ইন্টারনেট, অর্থনীতি সব কিছুতেই এর বিস্তৃত ব্যবহার আছে।\nক্লাসিক্যাল সাইফার বলতে সাধারনত ওইসব এনক্রিপশন অ্যালগরিদম বোঝানো হয় যা আধুনিক সাইফারের সেই গ্রিক রোমান জমানায় থেকে শুরু করে আরব, ইউরোপীয়দের হাত এই গত শতাব্দী আগেও ব্যবহার হতো।। এই ক্লাসিক্যাল এনক্রিপশন গুলো সাধারনত হাতে এনক্রিপ্ট ও ডেক্রিপ্টের কাজ করা হত । কিন্তু 1400 খ্রীস্টাব্দ এর পরে থেকে বিভিন্ন অটোমেটিক এনক্রিপশন যন্ত্রের ব্যবহার চালু হয়। যার মদ্ধে সবচেয়ে আলোচিত ইমপ্লেমেন্টেশনের নাম ছিল জার্মানীর এনিগমা যা ২য় বিশ্ব যুদ্ধে জার্মানদের প্রধান এনক্রিপশন মেশিন ছিল। সাধারনত এইসব এনক্রিপশন অ্যালগরিদম আধুনিক সাইফারের তুলনায় অনেক সহজ ও দুর্বল হয়। বর্তমান মোবাইল কম্পিউটিং পাওয়ার ব্যবহার করে এই এনক্রিপশন কয়েক মিনিট ভাঙ্গা সম্ভব। তাই বর্তমানে বিশ্বে এগুলো একেবারে অব্যবহৃত হয়ে আছে। একসময় এনক্রিপশন ছিল হাতে বা যন্ত্রে করা হত আধুনিক কম্পিউটার এর উন্নয়ন এর ফলে তা সফটওয়্যারের কাজ হয়ে যায়। কম্পিউটার বর্তমানে সেকেন্ডের ভেতর কোটি কোটি অপারেশন পারফর্ম করতে পারে। এই নতুন শক্তিকে কাজে লাগানোর জন্য নতুন নতুন এনক্রিপশন স্ট্যান্ডার্ড ডেভলপ করা হয়। কিন্তু এরাই বর্তমানের আধুনিক এনক্রিপশন স্ট্যান্ডার্ড এর ভিত্তি।\nক্লাসিক্যাল সাইফার কে সাধারনত দুই ভাগে বিভক্ত করা যায়।\n Substitution ciphers যেখানে কোন টেক্সটকে এনক্রিপটের করার জন্য এর কোন অক্ষরকে নির্ধারিত কিছু নিয়মে অন্যকোন অক্ষরের সাথে প্রতিস্থাপন করা হয়। Transposition cipher যেখানে কোন টেক্সটকে এনক্রিপটের করার জন্য অক্ষরগুলো যেই অর্ডারে আছে সেখান থেকে নির্ধারিত কিছু নিয়মে স্থানান্তর বা ভিন্ন অর্ডার এ সাজানো হয়।  ওপরের কোডে সিজার সাইফার টেকনিক ব্যবহার করে একটা টেক্সট এনক্রিপ্ট করে তারপর তা আবার ডেক্রিপ্ট করা হয়েছে। সিজার সাইফারে কোন অক্ষর এনক্রিপটের সময় তার পাশের নির্ধারিত কোন ঘরের অক্ষরের সাথে প্রতিস্থাপন করা হয়।\nজুলিয়াস সিজার তার সেনাপতির সাথে বার্তা আদান প্রদানের সময় প্রতিটি অক্ষরকে ৩ ঘর পাশের অক্ষরের সাথে প্রতিস্থাপন করে দিত।\nযেমনঃ\nA → D B → E C → F I julias the caeser → L mxoldv wkh fdhvhu এটাই সিজার সাইফার বা শিফটিং খুবই সিম্পল এবং বহুলত প্রচলিত একটা এনক্রিপশন টেকনিক। প্রায় হাজার বছর ধরে বিভিন্ন ক্ষেত্রে এটা তথ্য নিরাপত্তা দিয়ে এসেছে।\nসিজার সাইফার এনক্রিপশন ফাংশনের সি তে ইমপ্লিমেন্টেশন।\nvoid caeser_encrypt(char text[], int shift) { for (size_t i = 0; i  strlen(text); i++) { if (is_this_a_letter(\u0026text[i])) { text[i] = text[i] + shift; } } } এবং এর ডেক্রিপশন ফাংশনের সি তে ইমপ্লিমেন্টেশন।\nvoid caeser_decrypt(char text[], int shift) { for (size_t i = 0; i  strlen(text); i++) { if (is_this_a_letter(\u0026text[i])) { text[i] = text[i] - shift; } } } is_this_a_letter() এই ফাংশন এর কাজ একটা variable কে as reference নিয়ে সেটা একটা অক্ষর কিনা চেক করবে। এবং যদি অক্ষর হয় তবে true return করবে নতুবা false return করবে। কোড\nআল কিন্দী নামের এক আরব গনিতবিদ ৮০০ শতাব্দীতে এই এনক্রিপশন ভাংগার উপায় আবিষ্কার করেন। যার মাধ্যমে কত ঘর শিফট করে টেক্সটাকে এনক্রিপ্ট করে হয়েছে তা বের করা যেত। বর্তমানে যাকে এখন Frequency analysis বলে।\nবর্তমান আধুনিক বিশ্বে তথ্য এনক্রিপ্ট করার জন্য এরকম সহজ এনক্রিপশন ফলো করা হয় না। কিন্তু Substitution \u0026 Transposition chiper technique আধুনিক প্রটোকলের ভিত্তি হিসেবে কাজ করে। যেমন Rijndael (AES) এ যেকোন ডাটা এনক্রিপ্ট করার জন্য ছোট ছোট ব্লকে ভাগ করে এর key ওপর বেস করে বিভিন্ন substitution, shifting, transposition, mixing সহ করে বিভিন্ন অপারেশন চালানো হয়।\nএই হলো ক্ল্যাসিক ক্রিপ্টোগ্রাফি ও সিজার সাইফার। Transposition chipher এর একটা উদাহরন দরকার ছিল। হয়ত ভবিষ্যৎ দেয়া হবে।\nসম্পূর্ন কোড , আগে কোড টা নিজে সম্পূর্ন করার চেস্টা করতে হবে।\n",
-  "wordCount" : "651",
-  "inLanguage": "bn",
-  "image":"https://raw.githubusercontent.com/Jony-Blog/jony-blog-Backend/main/content/posts/images/classic_chiper/al-kindi-banne1r.png","datePublished": "2021-11-02T19:07:24+06:00",
-  "dateModified": "2021-11-02T19:07:24+06:00",
-  "author":{
-    "@type": "Person",
-    "name": "Jony Bepary"
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://jony-blog.github.io/bn/posts/classic_cryptography_caeser_cipher/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "জনির ব্লগ",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://jony-blog.github.io/favicon.ico"
-    }
-  }
-}
-</script>
+//Encrypted by Caesar Cipher encrypt(&#34;hello world&#34;) //output : &#34;khoor zruog&#34; dencrypt(&#34;khoor zruog&#34;) //output : &#34;hello world&#34; হাজার বছর ধরে নিরাপদে বিভিন্ন তথ্য আদান প্রদান এবং সংরক্ষন করার জন্যও বিভিন্ন ধরনের এনক্রিপশন কৌশল ব্যবহার ও চর্চা হয়ে আসছে। আমাদের বর্তমান সভ্যতা আধুনিক ক্রিপ্টগ্রাফির ওপর দাড়িয়ে আছে। শিক্ষা, চিকিৎসা, ব্যাংকিং, ডিজিটাল ট্রান্সেকশন থেকে শুরু করে মিলিটারি, ইন্টারনেট, অর্থনীতি সব কিছুতেই এর বিস্তৃত ব্যবহার আছে।">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://jony-blog.github.io/bn/posts/"},{"@type":"ListItem","position":2,"name":"ক্ল্যাসিক্যাল ক্রিপ্টোগ্রাফি ও সিজার সাইফার","item":"https://jony-blog.github.io/bn/posts/classic_cryptography_caeser_cipher/"}]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"ক্ল্যাসিক্যাল ক্রিপ্টোগ্রাফি ও সিজার সাইফার","name":"ক্ল্যাসিক্যাল ক্রিপ্টোগ্রাফি ও সিজার সাইফার","description":"ক্রিপ্টোলজি বা খাস বাংলায় বললে \u0026ldquo;তথ্য গুপ্তিকরন বিদ্যা\u0026rdquo; যা সহজ ভাষায় বললে কোন ইনফরমেশনকে কিছু নির্দিষ্ট নিয়ম মেনে বিকৃত বা রুপান্তর করার প্রক্রিয়া। যা ইনফরমেশনকে পড়ার অনুপযোগী করে ফেলে। যাতে কেউ যেন অনুমতি ব্যাতিত আরেকজনের ওই তথ্য দেখতে না পারে। আবার ওই বিকৃত ইনফরমেশনকে কিছু নির্দিষ্ট নিয়মে অবিকৃতও করা যায়।\nবিকৃত করার এই প্রসেসটাকে টাকে আমরা বলি এনক্রিপশন আর বিকৃত করা ইনফরমেশনকে পূর্বের অবস্থায় নিয়ে আসার প্রসেসকে বলি ডেক্রিপশন।\n//Encrypted by Caesar Cipher encrypt(\u0026#34;hello world\u0026#34;) //output : \u0026#34;khoor zruog\u0026#34; dencrypt(\u0026#34;khoor zruog\u0026#34;) //output : \u0026#34;hello world\u0026#34; হাজার বছর ধরে নিরাপদে বিভিন্ন তথ্য আদান প্রদান এবং সংরক্ষন করার জন্যও বিভিন্ন ধরনের এনক্রিপশন কৌশল ব্যবহার ও চর্চা হয়ে আসছে। আমাদের বর্তমান সভ্যতা আধুনিক ক্রিপ্টগ্রাফির ওপর দাড়িয়ে আছে। শিক্ষা, চিকিৎসা, ব্যাংকিং, ডিজিটাল ট্রান্সেকশন থেকে শুরু করে মিলিটারি, ইন্টারনেট, অর্থনীতি সব কিছুতেই এর বিস্তৃত ব্যবহার আছে।","keywords":["ক্লাসিক্যাল সাইফার","এনক্রিপশন","ক্রিপ্টোলজি","ক্রিপ্টোগ্রাফি","সিকিউরিটি"],"articleBody":"ক্রিপ্টোলজি বা খাস বাংলায় বললে “তথ্য গুপ্তিকরন বিদ্যা” যা সহজ ভাষায় বললে কোন ইনফরমেশনকে কিছু নির্দিষ্ট নিয়ম মেনে বিকৃত বা রুপান্তর করার প্রক্রিয়া। যা ইনফরমেশনকে পড়ার অনুপযোগী করে ফেলে। যাতে কেউ যেন অনুমতি ব্যাতিত আরেকজনের ওই তথ্য দেখতে না পারে। আবার ওই বিকৃত ইনফরমেশনকে কিছু নির্দিষ্ট নিয়মে অবিকৃতও করা যায়।\nবিকৃত করার এই প্রসেসটাকে টাকে আমরা বলি এনক্রিপশন আর বিকৃত করা ইনফরমেশনকে পূর্বের অবস্থায় নিয়ে আসার প্রসেসকে বলি ডেক্রিপশন।\n//Encrypted by Caesar Cipher encrypt(\"hello world\") //output : \"khoor zruog\" dencrypt(\"khoor zruog\") //output : \"hello world\" হাজার বছর ধরে নিরাপদে বিভিন্ন তথ্য আদান প্রদান এবং সংরক্ষন করার জন্যও বিভিন্ন ধরনের এনক্রিপশন কৌশল ব্যবহার ও চর্চা হয়ে আসছে। আমাদের বর্তমান সভ্যতা আধুনিক ক্রিপ্টগ্রাফির ওপর দাড়িয়ে আছে। শিক্ষা, চিকিৎসা, ব্যাংকিং, ডিজিটাল ট্রান্সেকশন থেকে শুরু করে মিলিটারি, ইন্টারনেট, অর্থনীতি সব কিছুতেই এর বিস্তৃত ব্যবহার আছে।\nক্লাসিক্যাল সাইফার বলতে সাধারনত ওইসব এনক্রিপশন অ্যালগরিদম বোঝানো হয় যা আধুনিক সাইফারের সেই গ্রিক রোমান জমানায় থেকে শুরু করে আরব, ইউরোপীয়দের হাত এই গত শতাব্দী আগেও ব্যবহার হতো।। এই ক্লাসিক্যাল এনক্রিপশন গুলো সাধারনত হাতে এনক্রিপ্ট ও ডেক্রিপ্টের কাজ করা হত । কিন্তু 1400 খ্রীস্টাব্দ এর পরে থেকে বিভিন্ন অটোমেটিক এনক্রিপশন যন্ত্রের ব্যবহার চালু হয়। যার মদ্ধে সবচেয়ে আলোচিত ইমপ্লেমেন্টেশনের নাম ছিল জার্মানীর এনিগমা যা ২য় বিশ্ব যুদ্ধে জার্মানদের প্রধান এনক্রিপশন মেশিন ছিল। সাধারনত এইসব এনক্রিপশন অ্যালগরিদম আধুনিক সাইফারের তুলনায় অনেক সহজ ও দুর্বল হয়। বর্তমান মোবাইল কম্পিউটিং পাওয়ার ব্যবহার করে এই এনক্রিপশন কয়েক মিনিট ভাঙ্গা সম্ভব। তাই বর্তমানে বিশ্বে এগুলো একেবারে অব্যবহৃত হয়ে আছে। একসময় এনক্রিপশন ছিল হাতে বা যন্ত্রে করা হত আধুনিক কম্পিউটার এর উন্নয়ন এর ফলে তা সফটওয়্যারের কাজ হয়ে যায়। কম্পিউটার বর্তমানে সেকেন্ডের ভেতর কোটি কোটি অপারেশন পারফর্ম করতে পারে। এই নতুন শক্তিকে কাজে লাগানোর জন্য নতুন নতুন এনক্রিপশন স্ট্যান্ডার্ড ডেভলপ করা হয়। কিন্তু এরাই বর্তমানের আধুনিক এনক্রিপশন স্ট্যান্ডার্ড এর ভিত্তি।\nক্লাসিক্যাল সাইফার কে সাধারনত দুই ভাগে বিভক্ত করা যায়।\n Substitution ciphers যেখানে কোন টেক্সটকে এনক্রিপটের করার জন্য এর কোন অক্ষরকে নির্ধারিত কিছু নিয়মে অন্যকোন অক্ষরের সাথে প্রতিস্থাপন করা হয়। Transposition cipher যেখানে কোন টেক্সটকে এনক্রিপটের করার জন্য অক্ষরগুলো যেই অর্ডারে আছে সেখান থেকে নির্ধারিত কিছু নিয়মে স্থানান্তর বা ভিন্ন অর্ডার এ সাজানো হয়।  ওপরের কোডে সিজার সাইফার টেকনিক ব্যবহার করে একটা টেক্সট এনক্রিপ্ট করে তারপর তা আবার ডেক্রিপ্ট করা হয়েছে। সিজার সাইফারে কোন অক্ষর এনক্রিপটের সময় তার পাশের নির্ধারিত কোন ঘরের অক্ষরের সাথে প্রতিস্থাপন করা হয়।\nজুলিয়াস সিজার তার সেনাপতির সাথে বার্তা আদান প্রদানের সময় প্রতিটি অক্ষরকে ৩ ঘর পাশের অক্ষরের সাথে প্রতিস্থাপন করে দিত।\nযেমনঃ\nA → D B → E C → F I julias the caeser → L mxoldv wkh fdhvhu এটাই সিজার সাইফার বা শিফটিং খুবই সিম্পল এবং বহুলত প্রচলিত একটা এনক্রিপশন টেকনিক। প্রায় হাজার বছর ধরে বিভিন্ন ক্ষেত্রে এটা তথ্য নিরাপত্তা দিয়ে এসেছে।\nসিজার সাইফার এনক্রিপশন ফাংশনের সি তে ইমপ্লিমেন্টেশন।\nvoid caeser_encrypt(char text[], int shift) { for (size_t i = 0; i  strlen(text); i++) { if (is_this_a_letter(\u0026text[i])) { text[i] = text[i] + shift; } } } এবং এর ডেক্রিপশন ফাংশনের সি তে ইমপ্লিমেন্টেশন।\nvoid caeser_decrypt(char text[], int shift) { for (size_t i = 0; i  strlen(text); i++) { if (is_this_a_letter(\u0026text[i])) { text[i] = text[i] - shift; } } } is_this_a_letter() এই ফাংশন এর কাজ একটা variable কে as reference নিয়ে সেটা একটা অক্ষর কিনা চেক করবে। এবং যদি অক্ষর হয় তবে true return করবে নতুবা false return করবে। কোড\nআল কিন্দী নামের এক আরব গনিতবিদ ৮০০ শতাব্দীতে এই এনক্রিপশন ভাংগার উপায় আবিষ্কার করেন। যার মাধ্যমে কত ঘর শিফট করে টেক্সটাকে এনক্রিপ্ট করে হয়েছে তা বের করা যেত। বর্তমানে যাকে এখন Frequency analysis বলে।\nবর্তমান আধুনিক বিশ্বে তথ্য এনক্রিপ্ট করার জন্য এরকম সহজ এনক্রিপশন ফলো করা হয় না। কিন্তু Substitution \u0026 Transposition chiper technique আধুনিক প্রটোকলের ভিত্তি হিসেবে কাজ করে। যেমন Rijndael (AES) এ যেকোন ডাটা এনক্রিপ্ট করার জন্য ছোট ছোট ব্লকে ভাগ করে এর key ওপর বেস করে বিভিন্ন substitution, shifting, transposition, mixing সহ করে বিভিন্ন অপারেশন চালানো হয়।\nএই হলো ক্ল্যাসিক ক্রিপ্টোগ্রাফি ও সিজার সাইফার। Transposition chipher এর একটা উদাহরন দরকার ছিল। হয়ত ভবিষ্যৎ দেয়া হবে।\nসম্পূর্ন কোড , আগে কোড টা নিজে সম্পূর্ন করার চেস্টা করতে হবে।\n","wordCount":"651","inLanguage":"bn","image":"https://raw.githubusercontent.com/Jony-Blog/jony-blog-Backend/main/content/posts/images/classic_chiper/al-kindi-banne1r.png","datePublished":"2021-11-02T19:07:24+06:00","dateModified":"2021-11-02T19:07:24+06:00","author":{"@type":"Person","name":"Jony Bepary"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://jony-blog.github.io/bn/posts/classic_cryptography_caeser_cipher/"},"publisher":{"@type":"Organization","name":"জনির ব্লগ","logo":{"@type":"ImageObject","url":"https://jony-blog.github.io/favicon.ico"}}}</script>
 </head>
-
-<body class="" id="top">
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-    }
-
-</script>
-
-<header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="https://jony-blog.github.io/bn/" accesskey="h" title="জনির ব্লগ (Alt + H)">জনির ব্লগ</a>
-            <span class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-                <ul class="lang-switch"><li>|</li>
-                    <li>
-                        <a href="https://jony-blog.github.io/" title="English"
-                            aria-label="English">English</a>
-                    </li>
-                </ul>
-            </span>
-        </div>
-        <ul id="menu">
-            <li>
-                <a href="https://jony-blog.github.io/bn/archives/" title="আর্কাইভ">
-                    <span>আর্কাইভ</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://jony-blog.github.io/bn/categories" title="ক্যাটাগওরি">
-                    <span>ক্যাটাগওরি</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://jony-blog.github.io/bn/tags" title="ট্যাগস">
-                    <span>ট্যাগস</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://jony-blog.github.io/bn/search/" title="সার্চ">
-                    <span>সার্চ</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://jony-blog.github.io/bn/series" title="সিরিজ">
-                    <span>সিরিজ</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main class="main">
-
-<article class="post-single">
-  <header class="post-header">
-    <div class="breadcrumbs"><a href="https://jony-blog.github.io/bn/">হোম</a>&nbsp;»&nbsp;<a href="https://jony-blog.github.io/bn/posts/">Posts</a></div>
-    <h1 class="post-title">
-      ক্ল্যাসিক্যাল ক্রিপ্টোগ্রাফি ও সিজার সাইফার
-    </h1>
-    <div class="post-meta"><span title='2021-11-02 19:07:24 +0600 +06'>November 2, 2021</span>&nbsp;·&nbsp;4 মিনিট&nbsp;·&nbsp;Jony Bepary&nbsp;|&nbsp;<a href="https://github.com/Jony-Blog/jony-blog-Backend/tree/main/content/posts/classic_cryptography_caeser_cipher.bn.md" rel="noopener noreferrer" target="_blank">Suggest Changes</a>
-
+<body id=top>
+<script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
+<header class=header>
+<nav class=nav>
+<div class=logo>
+<a href=https://jony-blog.github.io/bn/ accesskey=h title="জনির ব্লগ (Alt + H)">জনির ব্লগ</a>
+<span class=logo-switches>
+<button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+</button>
+<ul class=lang-switch><li>|</li>
+<li>
+<a href=https://jony-blog.github.io/ title=English aria-label=English>English</a>
+</li>
+</ul>
+</span>
 </div>
-  </header> 
-<figure class="entry-cover"><img loading="lazy" src="https://raw.githubusercontent.com/Jony-Blog/jony-blog-Backend/main/content/posts/images/classic_chiper/al-kindi-banne1r.png" alt="">
-        
+<ul id=menu>
+<li>
+<a href=https://jony-blog.github.io/bn/archives/ title=আর্কাইভ>
+<span>আর্কাইভ</span>
+</a>
+</li>
+<li>
+<a href=https://jony-blog.github.io/bn/categories title=ক্যাটাগওরি>
+<span>ক্যাটাগওরি</span>
+</a>
+</li>
+<li>
+<a href=https://jony-blog.github.io/bn/tags title=ট্যাগস>
+<span>ট্যাগস</span>
+</a>
+</li>
+<li>
+<a href=https://jony-blog.github.io/bn/search/ title=সার্চ>
+<span>সার্চ</span>
+</a>
+</li>
+<li>
+<a href=https://jony-blog.github.io/bn/series title=সিরিজ>
+<span>সিরিজ</span>
+</a>
+</li>
+</ul>
+</nav>
+</header>
+<main class=main>
+<article class=post-single>
+<header class=post-header>
+<div class=breadcrumbs><a href=https://jony-blog.github.io/bn/>হোম</a>&nbsp;»&nbsp;<a href=https://jony-blog.github.io/bn/posts/>Posts</a></div>
+<h1 class=post-title>
+ক্ল্যাসিক্যাল ক্রিপ্টোগ্রাফি ও সিজার সাইফার
+</h1>
+<div class=post-meta><span title="2021-11-02 19:07:24 +0600 +06">November 2, 2021</span>&nbsp;·&nbsp;4 মিনিট&nbsp;·&nbsp;Jony Bepary&nbsp;|&nbsp;<a href=https://github.com/Jony-Blog/jony-blog-Backend/tree/main/content/posts/classic_cryptography_caeser_cipher.bn.md rel="noopener noreferrer" target=_blank>Suggest Changes</a>
+</div>
+</header>
+<figure class=entry-cover><img loading=lazy src=https://raw.githubusercontent.com/Jony-Blog/jony-blog-Backend/main/content/posts/images/classic_chiper/al-kindi-banne1r.png alt>
 </figure>
-  <div class="post-content"><p>ক্রিপ্টোলজি বা খাস বাংলায় বললে &ldquo;তথ্য গুপ্তিকরন বিদ্যা&rdquo; যা সহজ ভাষায় বললে কোন ইনফরমেশনকে কিছু নির্দিষ্ট নিয়ম মেনে বিকৃত বা রুপান্তর করার প্রক্রিয়া। যা ইনফরমেশনকে পড়ার অনুপযোগী করে ফেলে। যাতে কেউ যেন অনুমতি ব্যাতিত আরেকজনের ওই তথ্য দেখতে না পারে। আবার ওই বিকৃত ইনফরমেশনকে কিছু নির্দিষ্ট নিয়মে অবিকৃতও করা যায়।</p>
+<div class=post-content><p>ক্রিপ্টোলজি বা খাস বাংলায় বললে &ldquo;তথ্য গুপ্তিকরন বিদ্যা&rdquo; যা সহজ ভাষায় বললে কোন ইনফরমেশনকে কিছু নির্দিষ্ট নিয়ম মেনে বিকৃত বা রুপান্তর করার প্রক্রিয়া। যা ইনফরমেশনকে পড়ার অনুপযোগী করে ফেলে। যাতে কেউ যেন অনুমতি ব্যাতিত আরেকজনের ওই তথ্য দেখতে না পারে। আবার ওই বিকৃত ইনফরমেশনকে কিছু নির্দিষ্ট নিয়মে অবিকৃতও করা যায়।</p>
 <p>বিকৃত করার এই প্রসেসটাকে টাকে আমরা বলি এনক্রিপশন আর বিকৃত করা ইনফরমেশনকে পূর্বের অবস্থায় নিয়ে আসার প্রসেসকে বলি ডেক্রিপশন।</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">//</span>Encrypted by Caesar Cipher
-encrypt(<span style="color:#e6db74">&#34;hello world&#34;</span>)
-<span style="color:#f92672">//</span>output : <span style="color:#e6db74">&#34;khoor zruog&#34;</span>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>//</span>Encrypted by Caesar Cipher
+encrypt(<span style=color:#e6db74>&#34;hello world&#34;</span>)
+<span style=color:#f92672>//</span>output : <span style=color:#e6db74>&#34;khoor zruog&#34;</span>
 
-dencrypt(<span style="color:#e6db74">&#34;khoor zruog&#34;</span>)
-<span style="color:#f92672">//</span>output : <span style="color:#e6db74">&#34;hello world&#34;</span>
+dencrypt(<span style=color:#e6db74>&#34;khoor zruog&#34;</span>)
+<span style=color:#f92672>//</span>output : <span style=color:#e6db74>&#34;hello world&#34;</span>
 </code></pre></div><p>হাজার বছর ধরে নিরাপদে বিভিন্ন তথ্য আদান প্রদান এবং সংরক্ষন করার জন্যও বিভিন্ন ধরনের এনক্রিপশন কৌশল ব্যবহার ও চর্চা হয়ে আসছে। আমাদের বর্তমান সভ্যতা আধুনিক ক্রিপ্টগ্রাফির ওপর দাড়িয়ে আছে। শিক্ষা, চিকিৎসা, ব্যাংকিং, ডিজিটাল ট্রান্সেকশন থেকে শুরু করে মিলিটারি, ইন্টারনেট, অর্থনীতি সব কিছুতেই এর বিস্তৃত ব্যবহার আছে।</p>
-<p>ক্লাসিক্যাল <a href="https://en.wikipedia.org/wiki/Cipher">সাইফার</a> বলতে সাধারনত ওইসব এনক্রিপশন অ্যালগরিদম বোঝানো হয় যা আধুনিক সাইফারের সেই গ্রিক রোমান জমানায় থেকে শুরু করে আরব, ইউরোপীয়দের হাত এই গত শতাব্দী আগেও ব্যবহার হতো।। এই ক্লাসিক্যাল এনক্রিপশন গুলো সাধারনত হাতে এনক্রিপ্ট ও ডেক্রিপ্টের কাজ করা হত । কিন্তু 1400 খ্রীস্টাব্দ এর পরে থেকে বিভিন্ন অটোমেটিক এনক্রিপশন যন্ত্রের ব্যবহার চালু হয়। যার মদ্ধে সবচেয়ে আলোচিত ইমপ্লেমেন্টেশনের নাম ছিল জার্মানীর এনিগমা যা ২য় বিশ্ব যুদ্ধে জার্মানদের প্রধান এনক্রিপশন মেশিন ছিল। সাধারনত এইসব এনক্রিপশন অ্যালগরিদম আধুনিক সাইফারের তুলনায় অনেক সহজ ও দুর্বল হয়। বর্তমান মোবাইল কম্পিউটিং পাওয়ার ব্যবহার করে এই এনক্রিপশন কয়েক মিনিট ভাঙ্গা সম্ভব। তাই বর্তমানে বিশ্বে এগুলো একেবারে অব্যবহৃত হয়ে আছে। একসময় এনক্রিপশন ছিল হাতে বা যন্ত্রে করা হত আধুনিক কম্পিউটার এর উন্নয়ন এর ফলে তা সফটওয়্যারের কাজ হয়ে যায়। কম্পিউটার বর্তমানে সেকেন্ডের ভেতর কোটি কোটি অপারেশন পারফর্ম করতে পারে। এই নতুন শক্তিকে কাজে লাগানোর জন্য নতুন নতুন এনক্রিপশন স্ট্যান্ডার্ড ডেভলপ করা হয়। কিন্তু এরাই বর্তমানের আধুনিক এনক্রিপশন স্ট্যান্ডার্ড এর ভিত্তি।</p>
-<p><a href="https://en.wikipedia.org/wiki/Classical_cipher#Types_of_classical_ciphers">ক্লাসিক্যাল সাইফার কে</a> সাধারনত দুই ভাগে বিভক্ত করা যায়।</p>
+<p>ক্লাসিক্যাল <a href=https://en.wikipedia.org/wiki/Cipher>সাইফার</a> বলতে সাধারনত ওইসব এনক্রিপশন অ্যালগরিদম বোঝানো হয় যা আধুনিক সাইফারের সেই গ্রিক রোমান জমানায় থেকে শুরু করে আরব, ইউরোপীয়দের হাত এই গত শতাব্দী আগেও ব্যবহার হতো।। এই ক্লাসিক্যাল এনক্রিপশন গুলো সাধারনত হাতে এনক্রিপ্ট ও ডেক্রিপ্টের কাজ করা হত । কিন্তু 1400 খ্রীস্টাব্দ এর পরে থেকে বিভিন্ন অটোমেটিক এনক্রিপশন যন্ত্রের ব্যবহার চালু হয়। যার মদ্ধে সবচেয়ে আলোচিত ইমপ্লেমেন্টেশনের নাম ছিল জার্মানীর এনিগমা যা ২য় বিশ্ব যুদ্ধে জার্মানদের প্রধান এনক্রিপশন মেশিন ছিল। সাধারনত এইসব এনক্রিপশন অ্যালগরিদম আধুনিক সাইফারের তুলনায় অনেক সহজ ও দুর্বল হয়। বর্তমান মোবাইল কম্পিউটিং পাওয়ার ব্যবহার করে এই এনক্রিপশন কয়েক মিনিট ভাঙ্গা সম্ভব। তাই বর্তমানে বিশ্বে এগুলো একেবারে অব্যবহৃত হয়ে আছে। একসময় এনক্রিপশন ছিল হাতে বা যন্ত্রে করা হত আধুনিক কম্পিউটার এর উন্নয়ন এর ফলে তা সফটওয়্যারের কাজ হয়ে যায়। কম্পিউটার বর্তমানে সেকেন্ডের ভেতর কোটি কোটি অপারেশন পারফর্ম করতে পারে। এই নতুন শক্তিকে কাজে লাগানোর জন্য নতুন নতুন এনক্রিপশন স্ট্যান্ডার্ড ডেভলপ করা হয়। কিন্তু এরাই বর্তমানের আধুনিক এনক্রিপশন স্ট্যান্ডার্ড এর ভিত্তি।</p>
+<p><a href=https://en.wikipedia.org/wiki/Classical_cipher#Types_of_classical_ciphers>ক্লাসিক্যাল সাইফার কে</a> সাধারনত দুই ভাগে বিভক্ত করা যায়।</p>
 <ol>
-<li><a href="https://en.wikipedia.org/wiki/Classical_cipher#Substitution_ciphers">Substitution ciphers</a> যেখানে কোন টেক্সটকে এনক্রিপটের করার জন্য এর কোন
+<li><a href=https://en.wikipedia.org/wiki/Classical_cipher#Substitution_ciphers>Substitution ciphers</a> যেখানে কোন টেক্সটকে এনক্রিপটের করার জন্য এর কোন
 অক্ষরকে নির্ধারিত কিছু নিয়মে অন্যকোন অক্ষরের সাথে প্রতিস্থাপন করা হয়।</li>
-<li><a href="https://en.wikipedia.org/wiki/Classical_cipher#Transposition_ciphers">Transposition cipher</a> যেখানে কোন টেক্সটকে এনক্রিপটের করার জন্য অক্ষরগুলো যেই অর্ডারে আছে সেখান থেকে নির্ধারিত কিছু নিয়মে স্থানান্তর বা ভিন্ন অর্ডার এ সাজানো হয়।</li>
+<li><a href=https://en.wikipedia.org/wiki/Classical_cipher#Transposition_ciphers>Transposition cipher</a> যেখানে কোন টেক্সটকে এনক্রিপটের করার জন্য অক্ষরগুলো যেই অর্ডারে আছে সেখান থেকে নির্ধারিত কিছু নিয়মে স্থানান্তর বা ভিন্ন অর্ডার এ সাজানো হয়।</li>
 </ol>
-<p>ওপরের কোডে <a href="https://en.wikipedia.org/wiki/Caesar_cipher">সিজার সাইফার</a> টেকনিক ব্যবহার করে একটা টেক্সট এনক্রিপ্ট করে তারপর তা আবার ডেক্রিপ্ট করা হয়েছে। সিজার সাইফারে কোন অক্ষর এনক্রিপটের সময় তার পাশের নির্ধারিত কোন ঘরের অক্ষরের সাথে প্রতিস্থাপন করা হয়।</p>
+<p>ওপরের কোডে <a href=https://en.wikipedia.org/wiki/Caesar_cipher>সিজার সাইফার</a> টেকনিক ব্যবহার করে একটা টেক্সট এনক্রিপ্ট করে তারপর তা আবার ডেক্রিপ্ট করা হয়েছে। সিজার সাইফারে কোন অক্ষর এনক্রিপটের সময় তার পাশের নির্ধারিত কোন ঘরের অক্ষরের সাথে প্রতিস্থাপন করা হয়।</p>
 <p>জুলিয়াস সিজার তার সেনাপতির সাথে বার্তা আদান প্রদানের সময় প্রতিটি অক্ষরকে ৩ ঘর পাশের অক্ষরের সাথে প্রতিস্থাপন করে দিত।</p>
 <p>যেমনঃ</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tex" data-lang="tex">A → D
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-tex data-lang=tex>A → D
 B → E
 C → F
 I julias the caeser → L mxoldv wkh fdhvhu
-</code></pre></div><p>এটাই <a href="https://en.wikipedia.org/wiki/Caesar_cipher">সিজার সাইফার</a> বা শিফটিং খুবই সিম্পল এবং বহুলত প্রচলিত একটা এনক্রিপশন টেকনিক। প্রায় হাজার বছর ধরে বিভিন্ন ক্ষেত্রে এটা তথ্য নিরাপত্তা দিয়ে এসেছে।</p>
-<p><a href="https://en.wikipedia.org/wiki/Caesar_cipher">সিজার সাইফার</a> এনক্রিপশন ফাংশনের সি তে ইমপ্লিমেন্টেশন।</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">caeser_encrypt</span>(<span style="color:#66d9ef">char</span> text[], <span style="color:#66d9ef">int</span> shift)
+</code></pre></div><p>এটাই <a href=https://en.wikipedia.org/wiki/Caesar_cipher>সিজার সাইফার</a> বা শিফটিং খুবই সিম্পল এবং বহুলত প্রচলিত একটা এনক্রিপশন টেকনিক। প্রায় হাজার বছর ধরে বিভিন্ন ক্ষেত্রে এটা তথ্য নিরাপত্তা দিয়ে এসেছে।</p>
+<p><a href=https://en.wikipedia.org/wiki/Caesar_cipher>সিজার সাইফার</a> এনক্রিপশন ফাংশনের সি তে ইমপ্লিমেন্টেশন।</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>caeser_encrypt</span>(<span style=color:#66d9ef>char</span> text[], <span style=color:#66d9ef>int</span> shift)
 {
-    <span style="color:#66d9ef">for</span> (size_t i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> strlen(text); i<span style="color:#f92672">++</span>)
+    <span style=color:#66d9ef>for</span> (size_t i <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; i <span style=color:#f92672>&lt;</span> strlen(text); i<span style=color:#f92672>++</span>)
     {
-        <span style="color:#66d9ef">if</span> (is_this_a_letter(<span style="color:#f92672">&amp;</span>text[i]))
+        <span style=color:#66d9ef>if</span> (is_this_a_letter(<span style=color:#f92672>&amp;</span>text[i]))
         {
-            text[i] <span style="color:#f92672">=</span> text[i] <span style="color:#f92672">+</span> shift;
+            text[i] <span style=color:#f92672>=</span> text[i] <span style=color:#f92672>+</span> shift;
         }
     }
 }
 
 </code></pre></div><p>এবং এর ডেক্রিপশন ফাংশনের সি তে ইমপ্লিমেন্টেশন।</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">caeser_decrypt</span>(<span style="color:#66d9ef">char</span> text[], <span style="color:#66d9ef">int</span> shift)
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c data-lang=c><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>caeser_decrypt</span>(<span style=color:#66d9ef>char</span> text[], <span style=color:#66d9ef>int</span> shift)
 {
-    <span style="color:#66d9ef">for</span> (size_t i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> strlen(text); i<span style="color:#f92672">++</span>)
+    <span style=color:#66d9ef>for</span> (size_t i <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; i <span style=color:#f92672>&lt;</span> strlen(text); i<span style=color:#f92672>++</span>)
     {
-        <span style="color:#66d9ef">if</span> (is_this_a_letter(<span style="color:#f92672">&amp;</span>text[i]))
+        <span style=color:#66d9ef>if</span> (is_this_a_letter(<span style=color:#f92672>&amp;</span>text[i]))
         {
-            text[i] <span style="color:#f92672">=</span> text[i] <span style="color:#f92672">-</span> shift;
+            text[i] <span style=color:#f92672>=</span> text[i] <span style=color:#f92672>-</span> shift;
         }
     }
 }
-</code></pre></div><p><code>is_this_a_letter()</code> এই ফাংশন এর কাজ একটা variable কে as reference নিয়ে সেটা একটা অক্ষর কিনা চেক করবে। এবং যদি অক্ষর হয় তবে true return করবে নতুবা false return করবে। <a href="https://gist.github.com/JonyBepary/8d392980d9ef92476bfdf757d1f18156">কোড</a></p>
-<p><a href="https://en.wikipedia.org/wiki/Al-Kindi">আল কিন্দী</a> নামের এক আরব গনিতবিদ ৮০০ শতাব্দীতে এই এনক্রিপশন ভাংগার <a href="https://en.wikipedia.org/wiki/Al-Kindi#Cryptography">উপায়</a> আবিষ্কার করেন। যার মাধ্যমে কত ঘর শিফট করে টেক্সটাকে এনক্রিপ্ট করে হয়েছে তা বের করা যেত। বর্তমানে যাকে এখন <a href="https://en.wikipedia.org/wiki/Frequency_analysis">Frequency analysis</a> বলে।</p>
-<p>বর্তমান আধুনিক বিশ্বে তথ্য এনক্রিপ্ট করার জন্য এরকম সহজ এনক্রিপশন ফলো করা হয় না। কিন্তু Substitution &amp; Transposition chiper technique আধুনিক প্রটোকলের ভিত্তি হিসেবে কাজ করে। যেমন Rijndael (AES) এ যেকোন ডাটা এনক্রিপ্ট করার জন্য ছোট ছোট ব্লকে ভাগ করে এর key ওপর বেস করে বিভিন্ন substitution, shifting, transposition, mixing সহ করে বিভিন্ন অপারেশন চালানো হয়।</p>
+</code></pre></div><p><code>is_this_a_letter()</code> এই ফাংশন এর কাজ একটা variable কে as reference নিয়ে সেটা একটা অক্ষর কিনা চেক করবে। এবং যদি অক্ষর হয় তবে true return করবে নতুবা false return করবে। <a href=https://gist.github.com/JonyBepary/8d392980d9ef92476bfdf757d1f18156>কোড</a></p>
+<p><a href=https://en.wikipedia.org/wiki/Al-Kindi>আল কিন্দী</a> নামের এক আরব গনিতবিদ ৮০০ শতাব্দীতে এই এনক্রিপশন ভাংগার <a href=https://en.wikipedia.org/wiki/Al-Kindi#Cryptography>উপায়</a> আবিষ্কার করেন। যার মাধ্যমে কত ঘর শিফট করে টেক্সটাকে এনক্রিপ্ট করে হয়েছে তা বের করা যেত। বর্তমানে যাকে এখন <a href=https://en.wikipedia.org/wiki/Frequency_analysis>Frequency analysis</a> বলে।</p>
+<p>বর্তমান আধুনিক বিশ্বে তথ্য এনক্রিপ্ট করার জন্য এরকম সহজ এনক্রিপশন ফলো করা হয় না। কিন্তু Substitution & Transposition chiper technique আধুনিক প্রটোকলের ভিত্তি হিসেবে কাজ করে। যেমন Rijndael (AES) এ যেকোন ডাটা এনক্রিপ্ট করার জন্য ছোট ছোট ব্লকে ভাগ করে এর key ওপর বেস করে বিভিন্ন substitution, shifting, transposition, mixing সহ করে বিভিন্ন অপারেশন চালানো হয়।</p>
 <p>এই হলো ক্ল্যাসিক ক্রিপ্টোগ্রাফি ও সিজার সাইফার। Transposition chipher এর একটা উদাহরন দরকার ছিল। হয়ত ভবিষ্যৎ দেয়া হবে।</p>
-<p><a href="https://github.com/JonyBepary/Mcod/blob/main/C/caeser_chipher.c">সম্পূর্ন কোড</a> , আগে কোড টা নিজে সম্পূর্ন করার চেস্টা করতে হবে।</p>
-
-
-  </div>
-
-  <footer class="post-footer">
-    <ul class="post-tags">
-      <li><a href="https://jony-blog.github.io/bn/tags/%E0%A6%95%E0%A7%8D%E0%A6%B2%E0%A6%BE%E0%A6%B8%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2-%E0%A6%B8%E0%A6%BE%E0%A6%87%E0%A6%AB%E0%A6%BE%E0%A6%B0/">ক্লাসিক্যাল সাইফার</a></li>
-      <li><a href="https://jony-blog.github.io/bn/tags/%E0%A6%8F%E0%A6%A8%E0%A6%95%E0%A7%8D%E0%A6%B0%E0%A6%BF%E0%A6%AA%E0%A6%B6%E0%A6%A8/">এনক্রিপশন</a></li>
-      <li><a href="https://jony-blog.github.io/bn/tags/%E0%A6%95%E0%A7%8D%E0%A6%B0%E0%A6%BF%E0%A6%AA%E0%A7%8D%E0%A6%9F%E0%A7%8B%E0%A6%B2%E0%A6%9C%E0%A6%BF/">ক্রিপ্টোলজি</a></li>
-      <li><a href="https://jony-blog.github.io/bn/tags/%E0%A6%95%E0%A7%8D%E0%A6%B0%E0%A6%BF%E0%A6%AA%E0%A7%8D%E0%A6%9F%E0%A7%8B%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AB%E0%A6%BF/">ক্রিপ্টোগ্রাফি</a></li>
-      <li><a href="https://jony-blog.github.io/bn/tags/%E0%A6%B8%E0%A6%BF%E0%A6%95%E0%A6%BF%E0%A6%89%E0%A6%B0%E0%A6%BF%E0%A6%9F%E0%A6%BF/">সিকিউরিটি</a></li>
-    </ul>
-<nav class="paginav">
-  <a class="next" href="https://jony-blog.github.io/bn/posts/arch-linux-and-some-word/">
-    <span class="title">পরবর্তী পাতা »</span>
-    <br>
-    <span>Arch Linux এবং কিছু কথা</span>
-  </a>
-</nav>
-
-
-<div class="share-buttons">
-    <a target="_blank" rel="noopener noreferrer" aria-label="share ক্ল্যাসিক্যাল ক্রিপ্টোগ্রাফি ও সিজার সাইফার on twitter"
-        href="https://twitter.com/intent/tweet/?text=%e0%a6%95%e0%a7%8d%e0%a6%b2%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b2%20%e0%a6%95%e0%a7%8d%e0%a6%b0%e0%a6%bf%e0%a6%aa%e0%a7%8d%e0%a6%9f%e0%a7%8b%e0%a6%97%e0%a7%8d%e0%a6%b0%e0%a6%be%e0%a6%ab%e0%a6%bf%20%e0%a6%93%20%e0%a6%b8%e0%a6%bf%e0%a6%9c%e0%a6%be%e0%a6%b0%20%e0%a6%b8%e0%a6%be%e0%a6%87%e0%a6%ab%e0%a6%be%e0%a6%b0&amp;url=https%3a%2f%2fjony-blog.github.io%2fbn%2fposts%2fclassic_cryptography_caeser_cipher%2f&amp;hashtags=%e0%a6%95%e0%a7%8d%e0%a6%b2%e0%a6%be%e0%a6%b8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b2%e0%a6%b8%e0%a6%be%e0%a6%87%e0%a6%ab%e0%a6%be%e0%a6%b0%2c%e0%a6%8f%e0%a6%a8%e0%a6%95%e0%a7%8d%e0%a6%b0%e0%a6%bf%e0%a6%aa%e0%a6%b6%e0%a6%a8%2c%e0%a6%95%e0%a7%8d%e0%a6%b0%e0%a6%bf%e0%a6%aa%e0%a7%8d%e0%a6%9f%e0%a7%8b%e0%a6%b2%e0%a6%9c%e0%a6%bf%2c%e0%a6%95%e0%a7%8d%e0%a6%b0%e0%a6%bf%e0%a6%aa%e0%a7%8d%e0%a6%9f%e0%a7%8b%e0%a6%97%e0%a7%8d%e0%a6%b0%e0%a6%be%e0%a6%ab%e0%a6%bf%2c%e0%a6%b8%e0%a6%bf%e0%a6%95%e0%a6%bf%e0%a6%89%e0%a6%b0%e0%a6%bf%e0%a6%9f%e0%a6%bf">
-        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
-            <path
-                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-253.927,424.544c135.939,0 210.268,-112.643 210.268,-210.268c0,-3.218 0,-6.437 -0.153,-9.502c14.406,-10.421 26.973,-23.448 36.935,-38.314c-13.18,5.824 -27.433,9.809 -42.452,11.648c15.326,-9.196 26.973,-23.602 32.49,-40.92c-14.252,8.429 -30.038,14.56 -46.896,17.931c-13.487,-14.406 -32.644,-23.295 -53.946,-23.295c-40.767,0 -73.87,33.104 -73.87,73.87c0,5.824 0.613,11.494 1.992,16.858c-61.456,-3.065 -115.862,-32.49 -152.337,-77.241c-6.284,10.881 -9.962,23.601 -9.962,37.088c0,25.594 13.027,48.276 32.95,61.456c-12.107,-0.307 -23.448,-3.678 -33.41,-9.196l0,0.92c0,35.862 25.441,65.594 59.311,72.49c-6.13,1.686 -12.72,2.606 -19.464,2.606c-4.751,0 -9.348,-0.46 -13.946,-1.38c9.349,29.426 36.628,50.728 68.965,51.341c-25.287,19.771 -57.164,31.571 -91.8,31.571c-5.977,0 -11.801,-0.306 -17.625,-1.073c32.337,21.15 71.264,33.41 112.95,33.41Z" />
-        </svg>
-    </a>
-    <a target="_blank" rel="noopener noreferrer" aria-label="share ক্ল্যাসিক্যাল ক্রিপ্টোগ্রাফি ও সিজার সাইফার on linkedin"
-        href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fjony-blog.github.io%2fbn%2fposts%2fclassic_cryptography_caeser_cipher%2f&amp;title=%e0%a6%95%e0%a7%8d%e0%a6%b2%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b2%20%e0%a6%95%e0%a7%8d%e0%a6%b0%e0%a6%bf%e0%a6%aa%e0%a7%8d%e0%a6%9f%e0%a7%8b%e0%a6%97%e0%a7%8d%e0%a6%b0%e0%a6%be%e0%a6%ab%e0%a6%bf%20%e0%a6%93%20%e0%a6%b8%e0%a6%bf%e0%a6%9c%e0%a6%be%e0%a6%b0%20%e0%a6%b8%e0%a6%be%e0%a6%87%e0%a6%ab%e0%a6%be%e0%a6%b0&amp;summary=%e0%a6%95%e0%a7%8d%e0%a6%b2%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b2%20%e0%a6%95%e0%a7%8d%e0%a6%b0%e0%a6%bf%e0%a6%aa%e0%a7%8d%e0%a6%9f%e0%a7%8b%e0%a6%97%e0%a7%8d%e0%a6%b0%e0%a6%be%e0%a6%ab%e0%a6%bf%20%e0%a6%93%20%e0%a6%b8%e0%a6%bf%e0%a6%9c%e0%a6%be%e0%a6%b0%20%e0%a6%b8%e0%a6%be%e0%a6%87%e0%a6%ab%e0%a6%be%e0%a6%b0&amp;source=https%3a%2f%2fjony-blog.github.io%2fbn%2fposts%2fclassic_cryptography_caeser_cipher%2f">
-        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
-            <path
-                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
-        </svg>
-    </a>
-    <a target="_blank" rel="noopener noreferrer" aria-label="share ক্ল্যাসিক্যাল ক্রিপ্টোগ্রাফি ও সিজার সাইফার on reddit"
-        href="https://reddit.com/submit?url=https%3a%2f%2fjony-blog.github.io%2fbn%2fposts%2fclassic_cryptography_caeser_cipher%2f&title=%e0%a6%95%e0%a7%8d%e0%a6%b2%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b2%20%e0%a6%95%e0%a7%8d%e0%a6%b0%e0%a6%bf%e0%a6%aa%e0%a7%8d%e0%a6%9f%e0%a7%8b%e0%a6%97%e0%a7%8d%e0%a6%b0%e0%a6%be%e0%a6%ab%e0%a6%bf%20%e0%a6%93%20%e0%a6%b8%e0%a6%bf%e0%a6%9c%e0%a6%be%e0%a6%b0%20%e0%a6%b8%e0%a6%be%e0%a6%87%e0%a6%ab%e0%a6%be%e0%a6%b0">
-        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
-            <path
-                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
-        </svg>
-    </a>
-    <a target="_blank" rel="noopener noreferrer" aria-label="share ক্ল্যাসিক্যাল ক্রিপ্টোগ্রাফি ও সিজার সাইফার on facebook"
-        href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fjony-blog.github.io%2fbn%2fposts%2fclassic_cryptography_caeser_cipher%2f">
-        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
-            <path
-                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
-        </svg>
-    </a>
-    <a target="_blank" rel="noopener noreferrer" aria-label="share ক্ল্যাসিক্যাল ক্রিপ্টোগ্রাফি ও সিজার সাইফার on whatsapp"
-        href="https://api.whatsapp.com/send?text=%e0%a6%95%e0%a7%8d%e0%a6%b2%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b2%20%e0%a6%95%e0%a7%8d%e0%a6%b0%e0%a6%bf%e0%a6%aa%e0%a7%8d%e0%a6%9f%e0%a7%8b%e0%a6%97%e0%a7%8d%e0%a6%b0%e0%a6%be%e0%a6%ab%e0%a6%bf%20%e0%a6%93%20%e0%a6%b8%e0%a6%bf%e0%a6%9c%e0%a6%be%e0%a6%b0%20%e0%a6%b8%e0%a6%be%e0%a6%87%e0%a6%ab%e0%a6%be%e0%a6%b0%20-%20https%3a%2f%2fjony-blog.github.io%2fbn%2fposts%2fclassic_cryptography_caeser_cipher%2f">
-        <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve">
-            <path
-                d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
-        </svg>
-    </a>
-    <a target="_blank" rel="noopener noreferrer" aria-label="share ক্ল্যাসিক্যাল ক্রিপ্টোগ্রাফি ও সিজার সাইফার on telegram"
-        href="https://telegram.me/share/url?text=%e0%a6%95%e0%a7%8d%e0%a6%b2%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b2%20%e0%a6%95%e0%a7%8d%e0%a6%b0%e0%a6%bf%e0%a6%aa%e0%a7%8d%e0%a6%9f%e0%a7%8b%e0%a6%97%e0%a7%8d%e0%a6%b0%e0%a6%be%e0%a6%ab%e0%a6%bf%20%e0%a6%93%20%e0%a6%b8%e0%a6%bf%e0%a6%9c%e0%a6%be%e0%a6%b0%20%e0%a6%b8%e0%a6%be%e0%a6%87%e0%a6%ab%e0%a6%be%e0%a6%b0&amp;url=https%3a%2f%2fjony-blog.github.io%2fbn%2fposts%2fclassic_cryptography_caeser_cipher%2f">
-        <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28">
-            <path
-                d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
-        </svg>
-    </a>
+<p><a href=https://github.com/JonyBepary/Mcod/blob/main/C/caeser_chipher.c>সম্পূর্ন কোড</a> , আগে কোড টা নিজে সম্পূর্ন করার চেস্টা করতে হবে।</p>
 </div>
-
-  </footer><script src="https://utteranc.es/client.js"
-        repo="Jony-Blog/public-coment"
-        issue-term="title"
-        label="✨💬✨"
-        theme="preferred-color-scheme"
-        crossorigin="anonymous"
-        async>
-</script>
-
-</article>
-    </main>
-    
-<footer class="footer">
-    <span>&copy; 2021 <a href="https://jony-blog.github.io/bn/">জনির ব্লগ</a></span>
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
+<footer class=post-footer>
+<ul class=post-tags>
+<li><a href=https://jony-blog.github.io/bn/tags/%E0%A6%95%E0%A7%8D%E0%A6%B2%E0%A6%BE%E0%A6%B8%E0%A6%BF%E0%A6%95%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2-%E0%A6%B8%E0%A6%BE%E0%A6%87%E0%A6%AB%E0%A6%BE%E0%A6%B0/>ক্লাসিক্যাল সাইফার</a></li>
+<li><a href=https://jony-blog.github.io/bn/tags/%E0%A6%8F%E0%A6%A8%E0%A6%95%E0%A7%8D%E0%A6%B0%E0%A6%BF%E0%A6%AA%E0%A6%B6%E0%A6%A8/>এনক্রিপশন</a></li>
+<li><a href=https://jony-blog.github.io/bn/tags/%E0%A6%95%E0%A7%8D%E0%A6%B0%E0%A6%BF%E0%A6%AA%E0%A7%8D%E0%A6%9F%E0%A7%8B%E0%A6%B2%E0%A6%9C%E0%A6%BF/>ক্রিপ্টোলজি</a></li>
+<li><a href=https://jony-blog.github.io/bn/tags/%E0%A6%95%E0%A7%8D%E0%A6%B0%E0%A6%BF%E0%A6%AA%E0%A7%8D%E0%A6%9F%E0%A7%8B%E0%A6%97%E0%A7%8D%E0%A6%B0%E0%A6%BE%E0%A6%AB%E0%A6%BF/>ক্রিপ্টোগ্রাফি</a></li>
+<li><a href=https://jony-blog.github.io/bn/tags/%E0%A6%B8%E0%A6%BF%E0%A6%95%E0%A6%BF%E0%A6%89%E0%A6%B0%E0%A6%BF%E0%A6%9F%E0%A6%BF/>সিকিউরিটি</a></li>
+</ul>
+<nav class=paginav>
+<a class=next href=https://jony-blog.github.io/bn/posts/arch-linux-and-some-word/>
+<span class=title>পরবর্তী পাতা »</span>
+<br>
+<span>Arch Linux এবং কিছু কথা</span>
 </a>
-
-<script>
-    let menu = document.getElementById('menu')
-    if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
-
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            document.body.classList.add('dark');
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
-<script>
-    document.querySelectorAll('pre > code').forEach((codeblock) => {
-        const container = codeblock.parentNode.parentNode;
-
-        const copybutton = document.createElement('button');
-        copybutton.classList.add('copy-code');
-        copybutton.innerText = 'কপি করুন';
-
-        function copyingDone() {
-            copybutton.innerText = 'কপি হয়েছে!';
-            setTimeout(() => {
-                copybutton.innerText = 'কপি করুন';
-            }, 2000);
-        }
-
-        copybutton.addEventListener('click', (cb) => {
-            if ('clipboard' in navigator) {
-                navigator.clipboard.writeText(codeblock.textContent);
-                copyingDone();
-                return;
-            }
-
-            const range = document.createRange();
-            range.selectNodeContents(codeblock);
-            const selection = window.getSelection();
-            selection.removeAllRanges();
-            selection.addRange(range);
-            try {
-                document.execCommand('copy');
-                copyingDone();
-            } catch (e) { };
-            selection.removeRange(range);
-        });
-
-        if (container.classList.contains("highlight")) {
-            container.appendChild(copybutton);
-        } else if (container.parentNode.firstChild == container) {
-            
-        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
-            
-            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
-        } else {
-            
-            codeblock.parentNode.appendChild(copybutton);
-        }
-    });
-</script>
+</nav>
+<div class=share-buttons>
+<a target=_blank rel="noopener noreferrer" aria-label="share ক্ল্যাসিক্যাল ক্রিপ্টোগ্রাফি ও সিজার সাইফার on twitter" href="https://twitter.com/intent/tweet/?text=%e0%a6%95%e0%a7%8d%e0%a6%b2%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b2%20%e0%a6%95%e0%a7%8d%e0%a6%b0%e0%a6%bf%e0%a6%aa%e0%a7%8d%e0%a6%9f%e0%a7%8b%e0%a6%97%e0%a7%8d%e0%a6%b0%e0%a6%be%e0%a6%ab%e0%a6%bf%20%e0%a6%93%20%e0%a6%b8%e0%a6%bf%e0%a6%9c%e0%a6%be%e0%a6%b0%20%e0%a6%b8%e0%a6%be%e0%a6%87%e0%a6%ab%e0%a6%be%e0%a6%b0&url=https%3a%2f%2fjony-blog.github.io%2fbn%2fposts%2fclassic_cryptography_caeser_cipher%2f&hashtags=%e0%a6%95%e0%a7%8d%e0%a6%b2%e0%a6%be%e0%a6%b8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b2%e0%a6%b8%e0%a6%be%e0%a6%87%e0%a6%ab%e0%a6%be%e0%a6%b0%2c%e0%a6%8f%e0%a6%a8%e0%a6%95%e0%a7%8d%e0%a6%b0%e0%a6%bf%e0%a6%aa%e0%a6%b6%e0%a6%a8%2c%e0%a6%95%e0%a7%8d%e0%a6%b0%e0%a6%bf%e0%a6%aa%e0%a7%8d%e0%a6%9f%e0%a7%8b%e0%a6%b2%e0%a6%9c%e0%a6%bf%2c%e0%a6%95%e0%a7%8d%e0%a6%b0%e0%a6%bf%e0%a6%aa%e0%a7%8d%e0%a6%9f%e0%a7%8b%e0%a6%97%e0%a7%8d%e0%a6%b0%e0%a6%be%e0%a6%ab%e0%a6%bf%2c%e0%a6%b8%e0%a6%bf%e0%a6%95%e0%a6%bf%e0%a6%89%e0%a6%b0%e0%a6%bf%e0%a6%9f%e0%a6%bf"><svg viewBox="0 0 512 512"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM195.519 424.544c135.939.0 210.268-112.643 210.268-210.268.0-3.218.0-6.437-.153-9.502 14.406-10.421 26.973-23.448 36.935-38.314-13.18 5.824-27.433 9.809-42.452 11.648 15.326-9.196 26.973-23.602 32.49-40.92-14.252 8.429-30.038 14.56-46.896 17.931-13.487-14.406-32.644-23.295-53.946-23.295-40.767.0-73.87 33.104-73.87 73.87.0 5.824.613 11.494 1.992 16.858-61.456-3.065-115.862-32.49-152.337-77.241-6.284 10.881-9.962 23.601-9.962 37.088.0 25.594 13.027 48.276 32.95 61.456-12.107-.307-23.448-3.678-33.41-9.196v.92c0 35.862 25.441 65.594 59.311 72.49-6.13 1.686-12.72 2.606-19.464 2.606-4.751.0-9.348-.46-13.946-1.38 9.349 29.426 36.628 50.728 68.965 51.341-25.287 19.771-57.164 31.571-91.8 31.571-5.977.0-11.801-.306-17.625-1.073 32.337 21.15 71.264 33.41 112.95 33.41z"/></svg>
+</a>
+<a target=_blank rel="noopener noreferrer" aria-label="share ক্ল্যাসিক্যাল ক্রিপ্টোগ্রাফি ও সিজার সাইফার on linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fjony-blog.github.io%2fbn%2fposts%2fclassic_cryptography_caeser_cipher%2f&title=%e0%a6%95%e0%a7%8d%e0%a6%b2%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b2%20%e0%a6%95%e0%a7%8d%e0%a6%b0%e0%a6%bf%e0%a6%aa%e0%a7%8d%e0%a6%9f%e0%a7%8b%e0%a6%97%e0%a7%8d%e0%a6%b0%e0%a6%be%e0%a6%ab%e0%a6%bf%20%e0%a6%93%20%e0%a6%b8%e0%a6%bf%e0%a6%9c%e0%a6%be%e0%a6%b0%20%e0%a6%b8%e0%a6%be%e0%a6%87%e0%a6%ab%e0%a6%be%e0%a6%b0&summary=%e0%a6%95%e0%a7%8d%e0%a6%b2%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b2%20%e0%a6%95%e0%a7%8d%e0%a6%b0%e0%a6%bf%e0%a6%aa%e0%a7%8d%e0%a6%9f%e0%a7%8b%e0%a6%97%e0%a7%8d%e0%a6%b0%e0%a6%be%e0%a6%ab%e0%a6%bf%20%e0%a6%93%20%e0%a6%b8%e0%a6%bf%e0%a6%9c%e0%a6%be%e0%a6%b0%20%e0%a6%b8%e0%a6%be%e0%a6%87%e0%a6%ab%e0%a6%be%e0%a6%b0&source=https%3a%2f%2fjony-blog.github.io%2fbn%2fposts%2fclassic_cryptography_caeser_cipher%2f"><svg viewBox="0 0 512 512"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM160.461 423.278V197.561h-75.04v225.717h75.04zm270.539.0V293.839c0-69.333-37.018-101.586-86.381-101.586-39.804.0-57.634 21.891-67.617 37.266v-31.958h-75.021c.995 21.181.0 225.717.0 225.717h75.02V297.222c0-6.748.486-13.492 2.474-18.315 5.414-13.475 17.767-27.434 38.494-27.434 27.135.0 38.007 20.707 38.007 51.037v120.768H431zM123.448 88.722C97.774 88.722 81 105.601 81 127.724c0 21.658 16.264 39.002 41.455 39.002h.484c26.165.0 42.452-17.344 42.452-39.002-.485-22.092-16.241-38.954-41.943-39.002z"/></svg>
+</a>
+<a target=_blank rel="noopener noreferrer" aria-label="share ক্ল্যাসিক্যাল ক্রিপ্টোগ্রাফি ও সিজার সাইফার on reddit" href="https://reddit.com/submit?url=https%3a%2f%2fjony-blog.github.io%2fbn%2fposts%2fclassic_cryptography_caeser_cipher%2f&title=%e0%a6%95%e0%a7%8d%e0%a6%b2%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b2%20%e0%a6%95%e0%a7%8d%e0%a6%b0%e0%a6%bf%e0%a6%aa%e0%a7%8d%e0%a6%9f%e0%a7%8b%e0%a6%97%e0%a7%8d%e0%a6%b0%e0%a6%be%e0%a6%ab%e0%a6%bf%20%e0%a6%93%20%e0%a6%b8%e0%a6%bf%e0%a6%9c%e0%a6%be%e0%a6%b0%20%e0%a6%b8%e0%a6%be%e0%a6%87%e0%a6%ab%e0%a6%be%e0%a6%b0"><svg viewBox="0 0 512 512"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM446 265.638c0-22.964-18.616-41.58-41.58-41.58-11.211.0-21.361 4.457-28.841 11.666-28.424-20.508-67.586-33.757-111.204-35.278l18.941-89.121 61.884 13.157c.756 15.734 13.642 28.29 29.56 28.29 16.407.0 29.706-13.299 29.706-29.701.0-16.403-13.299-29.702-29.706-29.702-11.666.0-21.657 6.792-26.515 16.578l-69.105-14.69c-1.922-.418-3.939-.042-5.585 1.036-1.658 1.073-2.811 2.761-3.224 4.686l-21.152 99.438c-44.258 1.228-84.046 14.494-112.837 35.232-7.468-7.164-17.589-11.591-28.757-11.591-22.965.0-41.585 18.616-41.585 41.58.0 16.896 10.095 31.41 24.568 37.918-.639 4.135-.99 8.328-.99 12.576.0 63.977 74.469 115.836 166.33 115.836s166.334-51.859 166.334-115.836c0-4.218-.347-8.387-.977-12.493 14.564-6.47 24.735-21.034 24.735-38.001zM326.526 373.831c-20.27 20.241-59.115 21.816-70.534 21.816-11.428.0-50.277-1.575-70.522-21.82-3.007-3.008-3.007-7.882.0-10.889 3.003-2.999 7.882-3.003 10.885.0 12.777 12.781 40.11 17.317 59.637 17.317 19.522.0 46.86-4.536 59.657-17.321 3.016-2.999 7.886-2.995 10.885.008 3.008 3.011 3.003 7.882-.008 10.889zm-5.23-48.781c-16.373.0-29.701-13.324-29.701-29.698.0-16.381 13.328-29.714 29.701-29.714 16.378.0 29.706 13.333 29.706 29.714.0 16.374-13.328 29.698-29.706 29.698zM160.91 295.348c0-16.381 13.328-29.71 29.714-29.71 16.369.0 29.689 13.329 29.689 29.71.0 16.373-13.32 29.693-29.689 29.693-16.386.0-29.714-13.32-29.714-29.693z"/></svg>
+</a>
+<a target=_blank rel="noopener noreferrer" aria-label="share ক্ল্যাসিক্যাল ক্রিপ্টোগ্রাফি ও সিজার সাইফার on facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fjony-blog.github.io%2fbn%2fposts%2fclassic_cryptography_caeser_cipher%2f"><svg viewBox="0 0 512 512"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H342.978V319.085h66.6l12.672-82.621h-79.272v-53.617c0-22.603 11.073-44.636 46.58-44.636H425.6v-70.34s-32.71-5.582-63.982-5.582c-65.288.0-107.96 39.569-107.96 111.204v62.971h-72.573v82.621h72.573V512h-191.104c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892z"/></svg>
+</a>
+<a target=_blank rel="noopener noreferrer" aria-label="share ক্ল্যাসিক্যাল ক্রিপ্টোগ্রাফি ও সিজার সাইফার on whatsapp" href="https://api.whatsapp.com/send?text=%e0%a6%95%e0%a7%8d%e0%a6%b2%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b2%20%e0%a6%95%e0%a7%8d%e0%a6%b0%e0%a6%bf%e0%a6%aa%e0%a7%8d%e0%a6%9f%e0%a7%8b%e0%a6%97%e0%a7%8d%e0%a6%b0%e0%a6%be%e0%a6%ab%e0%a6%bf%20%e0%a6%93%20%e0%a6%b8%e0%a6%bf%e0%a6%9c%e0%a6%be%e0%a6%b0%20%e0%a6%b8%e0%a6%be%e0%a6%87%e0%a6%ab%e0%a6%be%e0%a6%b0%20-%20https%3a%2f%2fjony-blog.github.io%2fbn%2fposts%2fclassic_cryptography_caeser_cipher%2f"><svg viewBox="0 0 512 512"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zm-58.673 127.703c-33.842-33.881-78.847-52.548-126.798-52.568-98.799.0-179.21 80.405-179.249 179.234-.013 31.593 8.241 62.428 23.927 89.612l-25.429 92.884 95.021-24.925c26.181 14.28 55.659 21.807 85.658 21.816h.074c98.789.0 179.206-80.413 179.247-179.243.018-47.895-18.61-92.93-52.451-126.81zM263.976 403.485h-.06c-26.734-.01-52.954-7.193-75.828-20.767l-5.441-3.229-56.386 14.792 15.05-54.977-3.542-5.637c-14.913-23.72-22.791-51.136-22.779-79.287.033-82.142 66.867-148.971 149.046-148.971 39.793.014 77.199 15.531 105.329 43.692 28.128 28.16 43.609 65.592 43.594 105.4-.034 82.149-66.866 148.983-148.983 148.984zm81.721-111.581c-4.479-2.242-26.499-13.075-30.604-14.571-4.105-1.495-7.091-2.241-10.077 2.241-2.986 4.483-11.569 14.572-14.182 17.562-2.612 2.988-5.225 3.364-9.703 1.12-4.479-2.241-18.91-6.97-36.017-22.23C231.8 264.15 222.81 249.484 220.198 245s-.279-6.908 1.963-9.14c2.016-2.007 4.48-5.232 6.719-7.847 2.24-2.615 2.986-4.484 4.479-7.472 1.493-2.99.747-5.604-.374-7.846-1.119-2.241-10.077-24.288-13.809-33.256-3.635-8.733-7.327-7.55-10.077-7.688-2.609-.13-5.598-.158-8.583-.158-2.986.0-7.839 1.121-11.944 5.604-4.105 4.484-15.675 15.32-15.675 37.364.0 22.046 16.048 43.342 18.287 46.332 2.24 2.99 31.582 48.227 76.511 67.627 10.685 4.615 19.028 7.371 25.533 9.434 10.728 3.41 20.492 2.929 28.209 1.775 8.605-1.285 26.499-10.833 30.231-21.295 3.732-10.464 3.732-19.431 2.612-21.298-1.119-1.869-4.105-2.99-8.583-5.232z"/></svg>
+</a>
+<a target=_blank rel="noopener noreferrer" aria-label="share ক্ল্যাসিক্যাল ক্রিপ্টোগ্রাফি ও সিজার সাইফার on telegram" href="https://telegram.me/share/url?text=%e0%a6%95%e0%a7%8d%e0%a6%b2%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b8%e0%a6%bf%e0%a6%95%e0%a7%8d%e0%a6%af%e0%a6%be%e0%a6%b2%20%e0%a6%95%e0%a7%8d%e0%a6%b0%e0%a6%bf%e0%a6%aa%e0%a7%8d%e0%a6%9f%e0%a7%8b%e0%a6%97%e0%a7%8d%e0%a6%b0%e0%a6%be%e0%a6%ab%e0%a6%bf%20%e0%a6%93%20%e0%a6%b8%e0%a6%bf%e0%a6%9c%e0%a6%be%e0%a6%b0%20%e0%a6%b8%e0%a6%be%e0%a6%87%e0%a6%ab%e0%a6%be%e0%a6%b0&url=https%3a%2f%2fjony-blog.github.io%2fbn%2fposts%2fclassic_cryptography_caeser_cipher%2f"><svg viewBox="2 2 28 28"><path d="M26.49 29.86H5.5a3.37 3.37.0 01-2.47-1 3.35 3.35.0 01-1-2.47V5.48A3.36 3.36.0 013 3 3.37 3.37.0 015.5 2h21A3.38 3.38.0 0129 3a3.36 3.36.0 011 2.46V26.37a3.35 3.35.0 01-1 2.47 3.38 3.38.0 01-2.51 1.02zm-5.38-6.71a.79.79.0 00.85-.66L24.73 9.24a.55.55.0 00-.18-.46.62.62.0 00-.41-.17q-.08.0-16.53 6.11a.59.59.0 00-.41.59.57.57.0 00.43.52l4 1.24 1.61 4.83a.62.62.0 00.63.43.56.56.0 00.4-.17L16.54 20l4.09 3A.9.9.0 0021.11 23.15zM13.8 20.71l-1.21-4q8.72-5.55 8.78-5.55c.15.0.23.0.23.16a.18.18.0 010 .06s-2.51 2.3-7.52 6.8z"/></svg>
+</a>
+</div>
+</footer><script src=https://utteranc.es/client.js repo=Jony-Blog/public-coment issue-term=title label=✨💬✨ theme=preferred-color-scheme crossorigin=anonymous async></script>
+</article>
+</main>
+<footer class=footer>
+<span>&copy; 2021 <a href=https://jony-blog.github.io/bn/>জনির ব্লগ</a></span>
+<span>
+Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a>
+</span>
+</footer>
+<a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
+</a>
+<script>let menu=document.getElementById('menu');menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script>
+<script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script>
+<script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script>
+<script>document.querySelectorAll('pre > code').forEach(b=>{const c=b.parentNode.parentNode,a=document.createElement('button');a.classList.add('copy-code'),a.innerText='কপি করুন';function d(){a.innerText='কপি হয়েছে!',setTimeout(()=>{a.innerText='কপি করুন'},2e3)}a.addEventListener('click',e=>{if('clipboard'in navigator){navigator.clipboard.writeText(b.textContent),d();return}const a=document.createRange();a.selectNodeContents(b);const c=window.getSelection();c.removeAllRanges(),c.addRange(a);try{document.execCommand('copy'),d()}catch(a){}c.removeRange(a)}),c.classList.contains("highlight")?c.appendChild(a):c.parentNode.firstChild==c||(b.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?b.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(a):b.parentNode.appendChild(a))})</script>
 </body>
-
 </html>
